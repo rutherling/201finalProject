@@ -8,22 +8,19 @@
     <link href="css/base.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <div>
-        <!--left: app name logo-->
+    <!-- Header Include -->
+    <div id="overdueQueue"> <!--overdue-->
+      <div class ="overdueCtct">
+        <!-- prototype div for an individual overdue person. Do we want to just have a set number of these and populate them or generate them dynamically from the JS? -->
+        <div class="ctctPic">
+        </div>
+        <div class="ctctName">
+        </div>
       </div>
-      <div>
-        <!--near right: go to contacts-->
-        <i class="fa fa-users" alt="go to contact list"></i>
-        <!--far right: add new contact-->
-        <i class="fa fa-plus-square" alt="add new contact"></i>
-      </div>
-    </header>
-
-    <div> <!--overdue-->
-    </div>
-
-    <div> <!--approaching names -->
+    <div class="horizontalBar"></div>
+    <div id="timeline">
+      <!--approaching names -->
+      <!-- not totally sure how we're structuring the exact output for the timeline. consequently not sure how to structure HTML -->
     </div>
 
     <footer>
