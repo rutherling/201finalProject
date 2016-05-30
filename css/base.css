@@ -1,6 +1,11 @@
 .fa {
   font-size: 48px;
 }
-.inputForm{
+label{
   display: list-item;
+  margin-bottom: 5px;
+  /*left-right alignment? */
+}
+.inputForm{
+  
 }
