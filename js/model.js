@@ -31,3 +31,24 @@ Contact.prototype.postpone = function(days) {
   );
   this.details.next = newDate;
 };
+
+function getUniqueId() {
+  // Start searching at ID 0
+  var newId = 0;
+
+  // Process the existing IDs, looking for the existence of the current iteration of newId.
+  //  This will exit with an unused ID number.
+  while ( idSearch(contact_array,newId) ) {
+    newId++;
+  }
+
+  // This is the function that searches the Contact array for the existence of a given ID number.
+  //  It returns null when a number is not used.
+  function idSearch(array,id) {
+    return array.filter(function ( obj ) {
+      return obj.id == id;
+    })[0];
+  }
+
+  return newId;
+}
