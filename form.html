@@ -5,6 +5,26 @@
     <title>Create Keepin Touch Contact</title>
   </head>
   <body>
-
+    <div class="inputForm">
+      Create New Contact
+      <form class="inputForm" action="index.html" method="post"> <!--change action tag?-->
+        <label for="firstName">First Name: <input type="text" name="firstName" id="firstName" placeholder="John" required="required">
+        </input></label>
+        <label for="lastName">Last Name: <input type="text" name="lastName" id="lastName" placeholder="Doe" required="required">
+        </input></label>
+        <label for="email">Email: <input type="email" name="email" id="email" placeholder="john.doe@email.com">
+        </input></label>
+        <label for="phone">Phone Number: <input type="tel" name="phone" id="phone" placeholder="###-###-####">
+          <!-- Can we get the phone number to do the hyphens? Ruth check stackoverflow. -->
+          <!--email OR phone must be entered, so JavaScript will need to check the length of each one, compare to 0, and alert user-->
+        </input></label>
+        <label for="reachOut">Reach out every <input type="text" name="reachOut" id="reachOut" placeholder="10" size="1">
+        </input> days</label>
+        <label for="topic">Topics <textarea placeholder="Conversation follow-ups, anniversary, birthday, gift ideas, prefers calls/text/email" rows="3" cols="35" type="text" name="topic" id="topic"></textarea></label>
+        <label for="contactPhoto">Photo <input type="file" name="contactPhoto" id="contactPhoto">
+        </input></label>
+        <input type="submit" name="addContact" value="Add Contact" id="submitNew"></input>
+      </form>
+    </div>
   </body>
 </html>
