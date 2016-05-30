@@ -1,7 +1,11 @@
 .fa {
   font-size: 48px;
 }
-
 hr {
   width: 85%;
+}
+label{
+  display: list-item;
+  margin-bottom: 5px;
+  /*left-right alignment? */
 }
