@@ -1,0 +1,11 @@
+#logo {
+  height: 4rem;
+  width: 4rem;
+  background-color: white;
+  display: inline;
+  border-radius: 100%;
+}
+
+li {
+  font-size: 3rem;
+}
