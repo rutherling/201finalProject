@@ -1,0 +1,59 @@
+
+html {
+background-color: navy;
+font-family: Montserrat,"Helvetica Neue",sans-serif;
+;
+}
+
+.ctctLabels {
+  height: 3rem;
+  width:auto;
+  padding:0;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /*border: 3px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.ctctFaces {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 100%;
+  margin: 0.25rem;
+  display: inline-block;
+  /*vertical-align: top;*/
+  background-image: url("/assets/Senior_Portrait_0067-478x700.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.mini-text {
+  display: inline-block;
+  height: 3rem;
+  width: 85%;
+  border-radius: 0 25px 25px 0;
+  /*font-size: 0.75em;*/
+  padding: 0.125rem;
+  vertical-align: top;
+}
+
+div {
+  /*margin: 0;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;;
+}
+
+.ctctName {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  font-weight: bold;
+  margin: 0.25rem 0 0 0;
+}
+
+.ctctPlans {
+  display: block;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  color: white;
+}
