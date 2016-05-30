@@ -27,6 +27,8 @@ function addContactFromForm(event) {
   }
   if (submit_object.firstName != '' || submit_object.lastName != '') {
     // construct and push object to array
+    var new_contact = new Contact(submit_object);
+    contact_array.push(new_contact);
   }
 
 }

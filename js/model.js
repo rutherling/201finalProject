@@ -31,3 +31,8 @@ Contact.prototype.postpone = function(days) {
   );
   this.details.next = newDate;
 };
+
+function getUniqueId() {
+  // temp return value
+  return 42;
+}
