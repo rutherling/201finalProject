@@ -30,5 +30,4 @@ function addContactFromForm(event) {
     var new_contact = new Contact(submit_object);
     contact_array.push(new_contact);
   }
-
 }
