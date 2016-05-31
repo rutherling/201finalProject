@@ -1,6 +1,6 @@
 
 html {
-background-color: navy;
+background-color: coral;
 font-family: Montserrat,"Helvetica Neue",sans-serif;
 ;
 }
@@ -8,6 +8,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 .ctctLabels {
   height: 3rem;
   width:auto;
+  margin:0.125rem 0 0 0;
   padding:0;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
@@ -21,7 +22,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   margin: 0.25rem;
   display: inline-block;
   /*vertical-align: top;*/
-  background-image: url("/assets/Senior_Portrait_0067-478x700.jpg");
+  background-image: url("assets/Senior_Portrait_0067-478x700.jpg");
   background-position: center;
   background-size: cover;
 }
