@@ -1,4 +1,4 @@
-var contact_array = [];
+var contactArray = [];
 
 // When a new Contact is created or imported from memory, it accepts an object literal
 //  which can have a wide variety of details. The only details that are mandatory are
@@ -52,3 +52,8 @@ function getUniqueId() {
 
   return newId;
 }
+
+Contact.prototype.initials = function() {
+  // A quick method of getting a contact's initials for the alt list icon.
+  return this.details.firstName[0] + this.details.lastName[0];
+};
