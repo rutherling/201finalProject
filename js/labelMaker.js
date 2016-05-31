@@ -1,11 +1,3 @@
-//Any functions that affect what the users see are here
-
-//Previous step: contactArray.push(submitObject)
-//Input: index from contactArray
-//Output: single <div> that holds everything
-//Next step: chronological order
-//then for loop that appends them all to document.body
-labelMaker();
 function labelMaker() {
   console.log('Label Maker is running.');
   var noteDiv = document.createElement('div');
@@ -34,5 +26,3 @@ function labelMaker() {
 
   return bubble;
 }
-//function to append children to timeline after looping through contactArray
-document.getElementById('timeline').appendChild(bubble);

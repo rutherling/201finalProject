@@ -15,7 +15,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
 
 .ctctLabels {
-  height: 3rem;
+  /*height: 3rem;*/
   width:auto;
   margin:0.125rem 0 0 0;
   padding:0;
@@ -38,7 +38,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 
 .mini-text {
   display: inline-block;
-  height: 3rem;
+  /*height: 3rem;*/
   width: 85%;
   border-radius: 0 25px 25px 0;
   /*font-size: 0.75em;*/
@@ -50,7 +50,7 @@ div {
   /*margin: 0;*/
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;;
+  text-overflow: ellipsis;
 }
 
 .ctctName {
