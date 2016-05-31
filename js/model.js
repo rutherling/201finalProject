@@ -1,5 +1,4 @@
 var contactArray = [];
-console.log('contactArray: ' + contactArray);
 // When a new Contact is created or imported from memory, it accepts an object literal
 //  which can have a wide variety of details. The only details that are mandatory are
 //  a first or last name.
