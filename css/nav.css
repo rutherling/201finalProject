@@ -1,9 +1,15 @@
+.container {
+  padding: 0 0 0.0625 0;
+}
 #logo {
-  height: 4rem;
-  width: 4rem;
+  height: 4.25rem;
+  width: 4.25rem;
+  /*padding: 0 0 0.0625rem 0;*/
+  /*position: relative;*/
   background-color: white;
   display: inline;
   border-radius: 100%;
+  /*opacity: 0.75;*/
 }
 
 li {

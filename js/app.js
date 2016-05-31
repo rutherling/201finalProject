@@ -20,4 +20,19 @@ function addContactFromForm(event) {
   }
   //Write to DOM from contactArray
   labelMaker();
+  window.location = 'details.html';
 }
+
+document.addEventListener('keydown', populateDemoContacts);
+
+function populateDemoContacts(event) {
+  console.log(event);
+  if (event.code == 'Equal') {
+    for (var i = 0; i < demoContacts.length; i++) {
+      var newContact = new Contact(demoContacts[i]);
+      contactArray.push(newContact);
+    }
+    console.log(contactArray);
+    document.removeEventListener('keydown', populateDemoContacts);
+  }
+};
