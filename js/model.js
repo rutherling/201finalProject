@@ -3,22 +3,24 @@ var contactArray = [];
 //  which can have a wide variety of details. The only details that are mandatory are
 //  a first or last name.
 function Contact(detailsProp) {
-  this.details = detailsProp;
-  this.sortName = detailsProp.lastName + detailsProp.firstName;
+  this.details = detailsProp.details;
   // If either of these are missing, the construction cannot proceed.
   if (this.sortName == '') {
     console.error('Error creating Contact:');
     console.info(detailsProp);
     return;
   }
-  this.id = detailsProp.id || getUniqueId();
+  this.id = detailsProp.id;
 
-  this.save = function() {
-    localStorage[this.id] = JSON.stringify(this);
-  };
-
-  this.save();
+  if (!this.id) {
+    this.id = getUniqueId();
+    this.save();
+  }
 }
+
+Contact.prototype.save = function() {
+  localStorage[this.id] = JSON.stringify(this);
+};
 
 Contact.prototype.postpone = function(days) {
   var newDate = new Date();
@@ -30,6 +32,15 @@ Contact.prototype.postpone = function(days) {
     this.details.next.getMilliseconds()
   );
   this.details.next = newDate;
+};
+
+Contact.prototype.initials = function() {
+  // A quick method of getting a contact's initials for the alt list icon.
+  return this.details.firstName[0] + this.details.lastName[0];
+};
+
+Contact.prototype.sortName = function() {
+  return this.details.lastName + this.details.firstName;
 };
 
 function getUniqueId() {
@@ -53,7 +64,26 @@ function getUniqueId() {
   return newId;
 }
 
-Contact.prototype.initials = function() {
-  // A quick method of getting a contact's initials for the alt list icon.
-  return this.details.firstName[0] + this.details.lastName[0];
+loadDataFromStorage();
+
+function loadDataFromStorage() {
+  for (object in localStorage) {
+    var newContact = new Contact(JSON.parse(localStorage[object]));
+    contactArray.push(newContact);
+  }
+}
+
+// If there's nothing in storage, this will generate demo contacts.
+populateDemoContacts();
+
+function populateDemoContacts() {
+  if (localStorage.length == 0) {
+    for (var i = 0; i < demoContacts.length; i++) {
+      var contactLiteral = {
+        'details': demoContacts[i]
+      };
+      var newContact = new Contact(contactLiteral);
+      contactArray.push(newContact);
+    }
+  }
 };

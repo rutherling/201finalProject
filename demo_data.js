@@ -4,7 +4,7 @@
 demoContacts = [
   {
     'firstName': 'Stefania',
-    'lastname': 'Custodio',
+    'lastName': 'Custodio',
     'phone': '503-555-0123',
     'email': 'Stefania@example.com',
     'reachOut': '45',
@@ -13,7 +13,7 @@ demoContacts = [
   },
   {
     'firstName': 'Kirstin',
-    'lastname': 'Innocent',
+    'lastName': 'Innocent',
     'phone': '503-555-0123',
     'email': 'Kirstin@example.com',
     'reachOut': '90',
@@ -22,7 +22,7 @@ demoContacts = [
   },
   {
     'firstName': 'Cleo',
-    'lastname': 'Degroot',
+    'lastName': 'Degroot',
     'phone': '503-555-0123',
     'email': 'Cleo@example.com',
     'reachOut': '60',
@@ -31,7 +31,7 @@ demoContacts = [
   },
   {
     'firstName': 'Alvina',
-    'lastname': 'Woolverton',
+    'lastName': 'Woolverton',
     'phone': '503-555-0123',
     'email': 'Alvina@example.com',
     'reachOut': '30',
@@ -40,7 +40,7 @@ demoContacts = [
   },
   {
     'firstName': 'Debbra',
-    'lastname': 'Araki',
+    'lastName': 'Araki',
     'phone': '503-555-0123',
     'email': 'Debbra@example.com',
     'reachOut': '15',
@@ -49,7 +49,7 @@ demoContacts = [
   },
   {
     'firstName': 'Milly',
-    'lastname': 'Carrithers',
+    'lastName': 'Carrithers',
     'phone': '503-555-0123',
     'email': 'Milly@example.com',
     'reachOut': '30',
@@ -58,7 +58,7 @@ demoContacts = [
   },
   {
     'firstName': 'Cedrick',
-    'lastname': 'Ritzer',
+    'lastName': 'Ritzer',
     'phone': '503-555-0123',
     'email': 'Cedrick@example.com',
     'reachOut': '45',
@@ -67,7 +67,7 @@ demoContacts = [
   },
   {
     'firstName': 'Gema',
-    'lastname': 'Dunne',
+    'lastName': 'Dunne',
     'phone': '503-555-0123',
     'email': 'Gema@example.com',
     'reachOut': '60',
@@ -76,7 +76,7 @@ demoContacts = [
   },
   {
     'firstName': 'Aron',
-    'lastname': 'Jeansonne',
+    'lastName': 'Jeansonne',
     'phone': '503-555-0123',
     'email': 'Aron@example.com',
     'reachOut': '90',
@@ -85,7 +85,7 @@ demoContacts = [
   },
   {
     'firstName': 'Leif',
-    'lastname': 'Caswell',
+    'lastName': 'Caswell',
     'phone': '503-555-0123',
     'email': 'Leif@example.com',
     'reachOut': '45',
@@ -94,7 +94,7 @@ demoContacts = [
   },
   {
     'firstName': 'Rolf',
-    'lastname': 'Auten',
+    'lastName': 'Auten',
     'phone': '503-555-0123',
     'email': 'Rolf@example.com',
     'reachOut': '14',
@@ -103,7 +103,7 @@ demoContacts = [
   },
   {
     'firstName': 'Jutta',
-    'lastname': 'Overholt',
+    'lastName': 'Overholt',
     'phone': '503-555-0123',
     'email': 'Jutta@example.com',
     'reachOut': '30',
@@ -112,7 +112,7 @@ demoContacts = [
   },
   {
     'firstName': 'Kathrin',
-    'lastname': 'Delillo',
+    'lastName': 'Delillo',
     'phone': '503-555-0123',
     'email': 'Kathrin@example.com',
     'reachOut': '180',
@@ -121,7 +121,7 @@ demoContacts = [
   },
   {
     'firstName': 'Otelia',
-    'lastname': 'Goodale',
+    'lastName': 'Goodale',
     'phone': '503-555-0123',
     'email': 'Otelia@example.com',
     'reachOut': '90',
@@ -130,7 +130,7 @@ demoContacts = [
   },
   {
     'firstName': 'Alethea',
-    'lastname': 'Sancho',
+    'lastName': 'Sancho',
     'phone': '503-555-0123',
     'email': 'Alethea@example.com',
     'reachOut': '60',
@@ -139,7 +139,7 @@ demoContacts = [
   },
   {
     'firstName': 'Cedric',
-    'lastname': 'Vangundy',
+    'lastName': 'Vangundy',
     'phone': '503-555-0123',
     'email': 'Cedric@example.com',
     'reachOut': '45',
@@ -148,7 +148,7 @@ demoContacts = [
   },
   {
     'firstName': 'Booker',
-    'lastname': 'Evins',
+    'lastName': 'Evins',
     'phone': '503-555-0123',
     'email': 'Booker@example.com',
     'reachOut': '30',
@@ -157,7 +157,7 @@ demoContacts = [
   },
   {
     'firstName': 'Nikia',
-    'lastname': 'Knobel',
+    'lastName': 'Knobel',
     'phone': '503-555-0123',
     'email': 'Nikia@example.com',
     'reachOut': '14',
@@ -166,7 +166,7 @@ demoContacts = [
   },
   {
     'firstName': 'Ethel',
-    'lastname': 'Sikes',
+    'lastName': 'Sikes',
     'phone': '503-555-0123',
     'email': 'Ethel@example.com',
     'reachOut': '45',
@@ -175,7 +175,7 @@ demoContacts = [
   },
   {
     'firstName': 'Pinkie',
-    'lastname': 'Turck',
+    'lastName': 'Turck',
     'phone': '503-555-0123',
     'email': 'Pinkie@example.com',
     'reachOut': '90',
