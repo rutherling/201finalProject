@@ -14,7 +14,7 @@ function Contact(details) {
   this.id = details.id || getUniqueId();
 
   function save() {
-    localstorage[this.id] = this.details;
+    localstorage[this.id] = JSON.stringify(this);
   }
 
   save();
