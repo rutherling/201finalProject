@@ -10,6 +10,7 @@ function Contact(detailsProp) {
   if (this.sortName == '') {
     console.error('Error creating Contact:');
     console.info(detailsProp);
+    return;
   }
   this.id = detailsProp.id || getUniqueId();
 

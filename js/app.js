@@ -1,10 +1,9 @@
 document.getElementById('submitNew').addEventListener('click',addContactFromForm);
 
 function addContactFromForm(event) {
-  console.log('Add Contact function is called.');
   event.preventDefault();
   var submitObject = {};
-  var inputArray = event.target;
+  var inputArray = event.target.form;
   for (var i = 0; i < inputArray.length; i++) {
     if (inputArray[i].name != '' && inputArray[i].value != '') {
       // event.target[i].name // field name
