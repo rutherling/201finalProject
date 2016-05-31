@@ -52,3 +52,8 @@ function getUniqueId() {
 
   return newId;
 }
+
+Contact.prototype.initials = function() {
+  // A quick method of getting a contact's initials for the alt list icon.
+  return this.details.firstName[0] + this.details.lastName[0];
+};
