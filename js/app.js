@@ -1,4 +1,4 @@
-document.getElementById('submitNew').addEventListener('click',addContactFromForm);
+document.getElementById('submitNew').addListener('click',addContactFromForm);
 
 function addContactFromForm(event) {
   event.preventDefaultAction();
