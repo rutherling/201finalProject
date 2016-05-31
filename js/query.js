@@ -25,10 +25,10 @@ function listOverdues () {
 
 function listAlphabetical () {
   sorted_alphabetical_array = contact_array.sort(function(a,b) {
-    if (a.details.sortName < b.details.sortName) {
+    if (a.sortName < b.sortName) {
       return -1;
     }
-    if (a.details.sortName > b.details.sortName) {
+    if (a.sortName > b.sortName) {
       return 1;
     }
     return 0;
