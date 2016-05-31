@@ -1,3 +1,5 @@
+document.getElementById('submitNew').addEventListener('click', addContactFromForm);
+
 //Enters contact data from form and puts it in an array
 function addContactFromForm(event) {
   event.preventDefault();
