@@ -1,4 +1,7 @@
 var today = new Date();
+var sorted_overdue_array = [];
+var sorted_next_array = [];
+var sorted_alphabetical_array = [];
 
 function listOverdues () {
   var overdue_array = [];
@@ -7,7 +10,7 @@ function listOverdues () {
       overdue_array.push(contact_array[i]);
     }
   };
-  var sorted_overdue_array = overdue_array.sort(function(a,b) {
+  sorted_overdue_array = overdue_array.sort(function(a,b) {
     if (Date.parse(a.details.next) > Date.parse(b.details.next)) {
       return -1;
     }
@@ -19,7 +22,7 @@ function listOverdues () {
 };
 
 function listAlphabetical () {
-  var sorted_alphabetical_array = contact_array.sort(function(a,b) {
+  sorted_alphabetical_array = contact_array.sort(function(a,b) {
     if (a.details.sortName < b.details.sortName) {
       return -1;
     }
@@ -31,7 +34,7 @@ function listAlphabetical () {
 };
 
 function listNextDates () {
-  var sorted_next_array = contact_array.sort(function(a,b) {
+  sorted_next_array = contact_array.sort(function(a,b) {
     if (Date.parse(a.details.next) < Date.parse(b.details.next)) {
       return -1;
     }
