@@ -1,7 +1,8 @@
-document.getElementById('submitNew').addListener('click',addContactFromForm);
+document.getElementById('submitNew').addEventListener('click',addContactFromForm);
 
 function addContactFromForm(event) {
-  event.preventDefaultAction();
+  console.log('Add Contact function is called.');
+  event.preventDefault();
   var submitObject = {};
   var inputArray = event.target;
   for (var i = 0; i < inputArray.length; i++) {

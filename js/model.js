@@ -3,21 +3,21 @@ var contactArray = [];
 // When a new Contact is created or imported from memory, it accepts an object literal
 //  which can have a wide variety of details. The only details that are mandatory are
 //  a first or last name.
-function Contact(details) {
-  this.details = details;
-  this.sortName = details.lastName + details.firstName;
+function Contact(detailsProp) {
+  this.details = detailsProp;
+  this.sortName = detailsProp.lastName + detailsProp.firstName;
   // If either of these are missing, the construction cannot proceed.
   if (this.sortName == '') {
     console.error('Error creating Contact:');
-    console.info(details);
+    console.info(detailsProp);
   }
-  this.id = details.id || getUniqueId();
+  this.id = detailsProp.id || getUniqueId();
 
-  function save() {
-    localstorage[this.id] = JSON.stringify(this);
-  }
+  this.save = function() {
+    localStorage[this.id] = JSON.stringify(this);
+  };
 
-  save();
+  this.save();
 }
 
 Contact.prototype.postpone = function(days) {
@@ -38,7 +38,7 @@ function getUniqueId() {
 
   // Process the existing IDs, looking for the existence of the current iteration of newId.
   //  This will exit with an unused ID number.
-  while ( idSearch(contact_array,newId) ) {
+  while ( idSearch(contactArray,newId) ) {
     newId++;
   }
 
