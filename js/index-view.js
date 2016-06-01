@@ -13,6 +13,16 @@ for (var i = 0; i < listNextDates().length; i++) {
 }
 
 for (var i = 0; i < listOverdues().length; i++) {
+  if (i === 2) {
+    var overdueLink = document.createElement('a');
+    overdueLink.setAttribute('href', 'overdue.html');
+    var doubleArrow = document.createElement('i');
+    doubleArrow.setAttribute('class', 'fa fa-angle-double-right');
+    doubleArrow.setAttribute('id', 'doubleRight');
+    overdueLink.appendChild(doubleArrow)
+    document.getElementById('overdueCtcts').appendChild(overdueLink);
+    break;
+  }
   var singleBubble = labelMaker('',
     listOverdues()[i].firstName,
     listOverdues()[i].lastName);
