@@ -13,9 +13,11 @@ function labelMaker() {
   innerDiv.appendChild(noteDiv);
 
   //Make containing div for contact avatar
-  var picture = document.createElement('div');
+  var picture = document.createElement('img');
   picture.setAttribute('class', 'ctctFaces');
-  picture.style['background-image'] = 'url("assets/Senior_Portrait_0067-478x700.jpg"))';
+  picture.setAttribute('src', 'assets/Senior_Portrait_0067-478x700.jpg');
+  picture.setAttribute('background', 'blue');
+  picture.setAttribute('alt','J.S.');
 
   //Make containing div for contact label
   var bubble = document.createElement('div');
