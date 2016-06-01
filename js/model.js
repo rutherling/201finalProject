@@ -113,7 +113,13 @@ function addContact(submitObject) {
     var arrayPosition = lookup(submitObject.id);
     var savedContact = contactArray[arrayPosition];
     for (key in submitObject) {
-      savedContact[key] = submitObject[key];
+      if (submitObject[key]) {
+        savedContact[key] = submitObject[key];
+      } else {
+        // For when a user completely removes info from a record. This avoids saving
+        //  an empty property.
+        delete savedContact[key];
+      }
     }
     contactArray[arrayPosition] = new Contact(savedContact);
   }

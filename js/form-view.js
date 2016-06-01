@@ -6,7 +6,7 @@ function addContactFromForm(event) {
   var submitObject = {};
   var inputArray = event.target.form;
   for (var i = 0; i < inputArray.length; i++) {
-    if (inputArray[i].name != '' && inputArray[i].value != '' && inputArray[i].name != 'addContact') {
+    if (inputArray[i].name != '' && inputArray[i].name != 'addContact') {
       // event.target[i].name // field name
       // event.target[i].value // input value
       submitObject[inputArray[i].name] = inputArray[i].value;
@@ -24,9 +24,10 @@ function addContactFromForm(event) {
 // console.log(urlObject(window.url));
 
 var passedId = urlObject(window.url).parameters.id;
+console.log(typeof(passedId));
 
 // When this page is used as a contact editor, populate the current values
-if (passedId) {
+if (typeof(passedId) == 'number') {
   populateFormValues(passedId);
 }
 
@@ -40,7 +41,7 @@ function populateFormValues(passedId) {
   var currentContact = contactArray[lookup(passedId)];
   for (key in currentContact) {
     var currentField = document.getElementById(key);
-    if (currentContact[key] && currentField) {
+    if (currentField) {
       currentField.value = currentContact[key];
     }
   }
