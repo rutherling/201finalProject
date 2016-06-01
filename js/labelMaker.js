@@ -50,10 +50,14 @@ function labelMaker (contactObject, status) {
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'btn btn-default btn-lg');
     noteDiv.textContent = Postpone;
+
+    var killDiv = document.createElement('i');
+    killDiv.setAttribute('class', 'fa fa-times-circle');
+    var MT = document.getElementsByClassName('mini-text');
+    MT.appendChild(killDiv);
   }
 
   //Make remove button if status is overdueList
-
 
   //Make containing div for contact label
   var bubble = document.createElement('div');
@@ -61,6 +65,7 @@ function labelMaker (contactObject, status) {
   bubble.appendChild(noPic);
   bubble.appendChild(picture);
   bubble.appendChild(innerDiv);
+  bubble.appendChild(killDiv);
 
   return bubble;
 }
