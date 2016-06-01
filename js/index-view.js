@@ -11,3 +11,10 @@ for (var i = 0; i < listNextDates().length; i++) {
     listNextDates()[i].lastName);
   document.getElementById('timeline').appendChild(singleBubble);
 }
+
+for (var i = 0; i < listOverdues().length; i++) {
+  var singleBubble = labelMaker(listOverdues()[i].topic,
+    listOverdues()[i].firstName,
+    listOverdues()[i].lastName);
+  document.getElementById('overdueCtcts').appendChild(singleBubble);
+}

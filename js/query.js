@@ -45,7 +45,7 @@ function listNextDates () {
       upcomingArray.push(contactArray[i]);
     }
   //sort that array by next contact point (contacts furthest in the future should be indexed last)
-  var sortedNextArray = contactArray.sort(function(a,b) {
+  var sortedNextArray = upcomingArray.sort(function(a,b) {
     if (Date.parse(a.next) < Date.parse(b.next)) {
       return -1;
     }
