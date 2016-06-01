@@ -6,6 +6,6 @@
 //then for loop that appends them all to document.body
 
 for (var i = 0; i < listAlphabetical().length; i++) {
-  var singleBubble = labelMaker(listAlphabetical()[i]);
+  var singleBubble = labelMaker(listAlphabetical()[i],'');
   document.getElementById('contactList').appendChild(singleBubble);
 }

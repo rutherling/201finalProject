@@ -6,7 +6,7 @@
 //then for loop that appends them all to document.body
 
 for (var i = 0; i < listNextDates().length; i++) {
-  var singleBubble = labelMaker(listNextDates()[i]);
+  var singleBubble = labelMaker(listNextDates()[i], '');
   document.getElementById('timeline').appendChild(singleBubble);
 }
 
@@ -23,8 +23,7 @@ for (var i = 0; i < listOverdues().length; i++) {
     document.getElementById('overdueCtcts').appendChild(overdueLink);
     break;
   }
-  var singleBubble = labelMaker(listOverdues()[i]);
+  var singleBubble = labelMaker(listOverdues()[i], overdueTray);
   singleBubble.style.opacity = 1 - (i / 8);
-
   document.getElementById('overdueCtcts').appendChild(singleBubble);
 }
