@@ -16,10 +16,6 @@ function addContactFromForm(event) {
   //  AND a phone or email.
   if ( (submitObject.firstName != '' || submitObject.lastName != '') &&
        (submitObject.phone != '' || submitObject.email != '') ) {
-    // construct and push object to array
-    var newContact = new Contact(submitObject);
-    contactArray.push(newContact);
+    addContact(submitObject);
   }
-  //Write to DOM from contactArray
-  labelMaker();
 }

@@ -15,16 +15,28 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   /*border: 3px solid rgba(255, 255, 255, 0.5);*/
 }
 
+#altDiv {
+  position:absolute;
+}
+#hasImg {
+  position:relative;
+}
+
 .ctctFaces {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 100%;
   margin: 0.25rem;
   display: inline-block;
-  /*vertical-align: top;*/
-  background-image: url("assets/Senior_Portrait_0067-478x700.jpg");
+  background: skyblue;
   background-position: center;
   background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 2.5rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
 }
 
 .mini-text {
