@@ -1,6 +1,6 @@
 var contactArray = [];
 // When a new Contact is created or imported from memory, it accepts an object literal
-//  which can have a wide variety of details. The only details that are mandatory are
+//  which can have a wide variety of properties. The only properties that are mandatory are
 //  a first or last name.
 function Contact(newInfo) {
   for (property in newInfo) {
@@ -31,12 +31,12 @@ Contact.prototype.postpone = function(days) {
   var newDate = new Date();
   newDate.setDate(newDate.getDate() + days);
   newDate.setHours(
-    this.details.next.getHours(),
-    this.details.next.getMinutes(),
-    this.details.next.getSeconds(),
-    this.details.next.getMilliseconds()
+    this.next.getHours(),
+    this.next.getMinutes(),
+    this.next.getSeconds(),
+    this.next.getMilliseconds()
   );
-  this.details.next = newDate;
+  this.next = newDate;
 };
 
 // When the user hits "done" on a contact, it's basically the same as postponing
@@ -44,17 +44,17 @@ Contact.prototype.postpone = function(days) {
 //  such as number of times postponed vs reset, and we re-examine this method at
 //  that time.
 Contact.prototype.reset = function() {
-  this.postpone(this.details.reachOut);
+  this.postpone(this.reachOut);
 };
 
 // A quick method of getting a contact's initials for the alt list icon.
 Contact.prototype.initials = function() {
-  return this.details.firstName[0] + this.details.lastName[0];
+  return this.firstName[0] + this.lastName[0];
 };
 
 // Simply returns an objects lastname and firstname as a single string.
 Contact.prototype.sortName = function() {
-  return this.details.lastName + this.details.firstName;
+  return this.lastName + this.firstName;
 };
 
 // WHen an object first gets created, it needs a unique identifier.
@@ -122,4 +122,14 @@ function populateDemoContacts() {
       contactArray.push(newContact);
     }
   }
-};
+}
+
+// This should be an easy way to call a specific contact from the array by id
+function contact(id) {
+  for (var i = 0; i < contactArray.length; i++) {
+    if (contactArray[i].id = id) {
+      return contactArray[i];
+    }
+  }
+  return false;
+}
