@@ -1,7 +1,7 @@
 function labelMaker (contactObject, status) {
   //Make div to display contact topic excerpt
   console.log('Label Maker is running.');
-  if ((status != overdueTray) && (status != overdueList)) {
+  if ((status != 'overdueTray') && (status != 'overdueList')) {
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'ctctPlans');
     noteDiv.textContent = contactObject.topic;
@@ -16,7 +16,9 @@ function labelMaker (contactObject, status) {
   var innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'mini-text');
   innerDiv.appendChild(nameDiv);
-  innerDiv.appendChild(noteDiv);
+  if (noteDiv) {
+    innerDiv.appendChild(noteDiv);
+  }
 
   //Make alt div for contact avatar
   var noPic = document.createElement('div');
@@ -46,11 +48,11 @@ function labelMaker (contactObject, status) {
   }
 
   //Make postpone button if status is overdueList
-  if (status == overdueList) {
-    var noteDiv = document.createElement('div');
-    noteDiv.setAttribute('class', 'btn btn-default btn-lg');
-    noteDiv.textContent = Postpone;
-
+  if (status == 'overdueList') {
+    var postDiv = document.createElement('div');
+    postDiv.setAttribute('class', 'btn btn-default btn-lg');
+    postDiv.textContent = 'Postpone';
+    innerDiv.appendChild(postDiv);
     var killDiv = document.createElement('i');
     killDiv.setAttribute('class', 'fa fa-times-circle');
     var MT = document.getElementsByClassName('mini-text');
@@ -63,7 +65,9 @@ function labelMaker (contactObject, status) {
   var bubble = document.createElement('div');
   bubble.setAttribute('class', 'ctctLabels');
   bubble.appendChild(noPic);
-  bubble.appendChild(picture);
+  if (contactObject.photo) {
+    bubble.appendChild(picture);
+  };
   bubble.appendChild(innerDiv);
   bubble.appendChild(killDiv);
 
