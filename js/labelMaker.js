@@ -49,9 +49,14 @@ function labelMaker (contactObject, status) {
 
   //Make postpone button if status is overdueList
   if (status == 'overdueList') {
-    var noteDiv = document.createElement('div');
-    noteDiv.setAttribute('class', 'btn btn-default btn-lg');
-    noteDiv.textContent = 'Postpone';
+    var postDiv = document.createElement('div');
+    postDiv.setAttribute('class', 'btn btn-default btn-lg');
+    postDiv.textContent = 'Postpone';
+    innerDiv.appendChild(postDiv);
+    var killDiv = document.createElement('i');
+    killDiv.setAttribute('class', 'fa fa-times-circle');
+    var MT = document.getElementsByClassName('mini-text');
+    MT.appendChild(killDiv);
   }
 
   //Make remove button if status is overdueList
@@ -64,6 +69,7 @@ function labelMaker (contactObject, status) {
     bubble.appendChild(picture);
   };
   bubble.appendChild(innerDiv);
+  bubble.appendChild(killDiv);
 
   return bubble;
 }
