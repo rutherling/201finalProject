@@ -13,8 +13,9 @@ for (var i = 0; i < listNextDates().length; i++) {
 }
 
 for (var i = 0; i < listOverdues().length; i++) {
-  var singleBubble = labelMaker(listOverdues()[i].topic,
+  var singleBubble = labelMaker('',
     listOverdues()[i].firstName,
     listOverdues()[i].lastName);
+  singleBubble.style.opacity = 1 - (i / 8);
   document.getElementById('overdueCtcts').appendChild(singleBubble);
 }

@@ -11,3 +11,15 @@ for (var i = 0; i < listAlphabetical().length; i++) {
     listAlphabetical()[i].lastName);
   document.getElementById('contactList').appendChild(singleBubble);
 }
+
+
+
+for (var i = 0; i <
+
+
+  .length; i++) {
+
+
+
+  [i]
+}

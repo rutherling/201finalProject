@@ -5,17 +5,11 @@ hr {
   width: 85%;
 }
 label{
+  display: list-item;
   margin-bottom: 5px;
-  display: block;
+  /*left-right alignment? */
 }
-label #topic{
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-#submitNew{
-  float: right;
-  margin-right: 15px;
-}
+
 html {
 font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
@@ -46,6 +40,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   display: inline-block;
   /*height: 3rem;*/
   width: 85%;
+  margin-right: 5px;
   border-radius: 0 25px 25px 0;
   /*font-size: 0.75em;*/
   padding: 0.125rem;
@@ -76,7 +71,15 @@ div {
 .inputForm{
   margin-left: 20%;
   margin-right: 10%;
-  margin-top: 45px;
-  /*justify-content: space-between;
-  flex: auto;*/
+  margin-top: 100px;
+}
+#overdueCtcts {
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#overdueCtcts div {
+  display: inline-block;
+  background-color: red;
 }
