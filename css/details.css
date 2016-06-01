@@ -24,6 +24,7 @@
   margin: 10px;
   padding: 3px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 p {
@@ -48,10 +49,12 @@ p {
 
 .righthalf {
   width: 50%;
-  float: right;
+  /*float: right;*/
   border: 1px white solid;
   /*margin-left: 50%;*/
   height: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .lefthalf {
@@ -89,4 +92,8 @@ p {
   float: right;
   /*height: 100%;*/
   display: inline-block;
+}
+.email, .phone{
+  display: block;
+
 }
