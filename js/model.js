@@ -7,17 +7,15 @@ function Contact(newInfo) {
     this[property] = newInfo[property];
   }
   // If either of these are missing, the construction cannot proceed.
-  if (this.sortName == '') {
+  if (this.sortName() == '') {
     console.error('Error creating Contact:');
     console.info(newInfo);
     return;
   }
-  this.id = newInfo.id;
-
   if (!this.id) {
     this.id = getUniqueId();
-    this.save();
   }
+  this.save();
 }
 
 // Each object has the ability and responsibility to save itself to persistent storage.
@@ -107,9 +105,18 @@ function loadDataFromStorage() {
 // This is a function to make a new Contact object, but it might also be
 //  adapted to update a current object already in the array and storage.
 function addContact(submitObject) {
-  // construct and push object to array
-  var newContact = new Contact(submitObject);
-  contactArray.push(newContact);
+  if (!submitObject.id) {
+    // construct and push object to array
+    var newContact = new Contact(submitObject);
+    contactArray.push(newContact);
+  } else {
+    var arrayPosition = lookup(submitObject.id);
+    var savedContact = contactArray[arrayPosition];
+    for (key in submitObject) {
+      savedContact[key] = submitObject[key];
+    }
+    contactArray[arrayPosition] = new Contact(savedContact);
+  }
 }
 
 // If there's nothing in storage, this will generate demo contacts.
@@ -124,11 +131,12 @@ function populateDemoContacts() {
   }
 }
 
-// This should be an easy way to call a specific contact from the array by id
-function contact(id) {
+// This should be an easy way to find specific contact in the array by id.
+//  USAGE: var currentContact = contactArray[lookup(id)];
+function lookup(id) {
   for (var i = 0; i < contactArray.length; i++) {
     if (contactArray[i].id == id) {
-      return contactArray[i];
+      return i;
     }
   }
   return false;
