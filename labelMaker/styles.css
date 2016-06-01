@@ -12,13 +12,16 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   padding:0;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
-  /*border: 3px solid rgba(255, 255, 255, 0.5);*/
 }
 
-#altDiv {
+.altDiv {
   position:absolute;
+  background-color: skyblue;
+  background-position: center;
+  background-size: cover;
 }
-#hasImg {
+
+.hasImg {
   position:relative;
 }
 
@@ -28,9 +31,6 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   border-radius: 100%;
   margin: 0.25rem;
   display: inline-block;
-  background: skyblue;
-  background-position: center;
-  background-size: cover;
   text-align: center;
   vertical-align: middle;
   color: white;
@@ -41,7 +41,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 
 .mini-text {
   display: inline-block;
-  height: 3rem;
+  /*height: 3rem;*/
   width: 85%;
   border-radius: 0 25px 25px 0;
   /*font-size: 0.75em;*/

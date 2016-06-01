@@ -15,13 +15,22 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
 
 .ctctLabels {
-  /*height: 3rem;*/
   width:auto;
   margin:0.125rem 0 0 0;
   padding:0;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
-  /*border: 3px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.altDiv {
+  position:absolute;
+  background-color: skyblue;
+  background-position: center;
+  background-size: cover;
+}
+
+.hasImg {
+  position:relative;
 }
 
 .ctctFaces {
@@ -30,10 +39,12 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   border-radius: 100%;
   margin: 0.25rem;
   display: inline-block;
-  /*vertical-align: top;*/
-  background-image: url("assets/Senior_Portrait_0067-478x700.jpg");
-  background-position: center;
-  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 2.5rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
 }
 
 .mini-text {
