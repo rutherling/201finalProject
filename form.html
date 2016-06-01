@@ -2,6 +2,9 @@
 <html>
 <head>
 
+
+
+  <!-- Custom Fonts -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,24 +13,20 @@
 
     <title>Create Keep Touch Contact</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="vendor/bootstrap/css/grayscale.css" rel="stylesheet">
-
-    <!-- Group-made CSS -->
-    <link href="css/nav.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <script src="https://use.fontawesome.com/50ce0c99e2.js"></script>
-
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="vendor/bootstrap/css/grayscale.css" rel="stylesheet">
+    <!-- Group-made CSS -->
+    <link href="css/nav.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--Styling to fit info together in a bubble-->
     <link href="css/base.css" rel="stylesheet" type="text/css">
+    <link href="css/details.css" rel="stylesheet">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -36,19 +35,18 @@
 <div w3-include-html="nav.html"></div>
 
 <!-- Content -->
-<div class="inputForm">
+<div class="mommaDiv">
   <form class="inputForm" action="index.html" method="post" id="theActualForm"> <!--change action tag?-->
-    <label for="firstName">First Name: <br>
-      <input type="text" name="firstName" id="firstName" placeholder="John" required="required">
-    </input></label>
-    <label for="lastName">Last Name:<br> <input type="text" name="lastName" id="lastName" placeholder="Doe" required="required">
-    </input></label>
-    <label for="email">Email:<br> <input type="email" name="email" id="email" placeholder="john.doe@email.com">
-    </input></label>
-    <label for="phone">Phone Number: <br><input type="tel" name="phone" id="phone" placeholder="###-###-####">
-      <!-- Can we get the phone number to do the hyphens? Ruth check stackoverflow. -->
-      <!--email OR phone must be entered, so JavaScript will need to check the length of each one, compare to 0, and alert user-->
-    </input></label>
+    <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required">
+    </input>
+    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required">
+  </input><br>
+  <div class="rightHalf">
+    <input type="email" name="email" id="email" placeholder="Email example@email.com" class="email">
+    </input>
+    <input type="tel" name="phone" id="phone" placeholder="Phone ###-###-####" class="phone">
+    </input>
+  </div>
     <label for="reachOut">Reach out every <input type="text" name="reachOut" id="reachOut" placeholder="10" size="1">
     </input> days</label>
     <label for="topic">Topics<br><textarea placeholder="Conversation follow-ups, anniversary, birthday, gift ideas, prefers calls/text/email" rows="3" cols="35" type="text" name="topic" id="topic"></textarea></label>
@@ -56,6 +54,32 @@
     </input></label>
     <input type="submit" name="addContact" value="Save" id="submitNew"></input>
   </form>
+</div>
+
+<div class='baseBallCard'>
+  <p class='name'>Miranda Richardson</p>
+  <p class='topic'>Coffee at Mete at Mete at Mete at Mete at Mete at Mete at Mete at Mete at Mete at Mete at Metropol</p>
+  <section class="midface">
+    <div class="lefthalf">
+      <div class="circle">
+        <p class="nextContact"> 5 Days </p>
+      </div>
+    </div>
+    <div class="righthalf">
+      <p class='phoneNumber'>(503) 456-7890</p>
+      <p class='email'>miranda@richardson.com</p>
+    </div>
+  </section>
+  <section style="clear: both">
+  <div>
+    <div class="doneButton detailsButton btn btn-default btn-lg">Complete</div>
+    <div class="postponeButton detailsButton btn btn-default btn-lg">Postpone</div>
+  </div>
+<div class="smallflex">
+  <div class="editButton detailsButton btn btn-default btn-lg">Edit</div>
+  <div class="removeButton detailsButton btn btn-default">Remove</div>
+</div>
+</section>
 </div>
 
     <footer>
