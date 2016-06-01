@@ -1,3 +1,14 @@
 #bulkRemove, #bulkPostpone {
   display: inline;
 }
+
+.fa-times-circle {
+  font-size: 35px !important;
+  display: inline-block;
+}
+
+.postponeButton {
+  width: 95%;
+  font-size: 12px;
+  padding: 4px;
+}
