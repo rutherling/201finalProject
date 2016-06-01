@@ -87,3 +87,15 @@ function populateDemoContacts() {
     }
   }
 };
+
+// Just pass in the id of a contact and this function will remove that contact
+//  from the array and from local storage.
+function removeContact(id) {
+  for (var i = 0; i < contactArray.length; i++) {
+    if (contactArray[i].id == id) {
+      contactArray.splice(id,1);
+      return true;
+    }
+  }
+  return false;
+}
