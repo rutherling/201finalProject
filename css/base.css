@@ -5,29 +5,32 @@ hr {
   width: 85%;
 }
 label{
+  display: list-item;
   margin-bottom: 5px;
-  display: block;
+  /*left-right alignment? */
 }
-label #topic{
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-#submitNew{
-  float: right;
-  margin-right: 15px;
-}
+
 html {
 font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
 
 .ctctLabels {
-  /*height: 3rem;*/
   width:auto;
   margin:0.125rem 0 0 0;
   padding:0;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
-  /*border: 3px solid rgba(255, 255, 255, 0.5);*/
+}
+
+.altDiv {
+  position:absolute;
+  background-color: skyblue;
+  background-position: center;
+  background-size: cover;
+}
+
+.hasImg {
+  position:relative;
 }
 
 .ctctFaces {
@@ -36,16 +39,19 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   border-radius: 100%;
   margin: 0.25rem;
   display: inline-block;
-  /*vertical-align: top;*/
-  background-image: url("assets/Senior_Portrait_0067-478x700.jpg");
-  background-position: center;
-  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 2.5rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
 }
 
 .mini-text {
   display: inline-block;
   /*height: 3rem;*/
   width: 85%;
+  margin-right: 5px;
   border-radius: 0 25px 25px 0;
   /*font-size: 0.75em;*/
   padding: 0.125rem;
@@ -76,7 +82,15 @@ div {
 .inputForm{
   margin-left: 20%;
   margin-right: 10%;
-  margin-top: 45px;
-  /*justify-content: space-between;
-  flex: auto;*/
+  margin-top: 100px;
+}
+#overdueCtcts {
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#overdueCtcts div {
+  display: inline-block;
+  background-color: red;
 }
