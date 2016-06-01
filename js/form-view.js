@@ -19,3 +19,21 @@ function addContactFromForm(event) {
     addContact(submitObject);
   }
 }
+
+// Demo of how we will get the properties in the URL
+// console.log(urlObject(window.url));
+
+var passedId = urlObject(window.url).parameters.id;
+
+populateFormValues(passedId);
+
+function populateFormValues(passedId) {
+  var currentContact = contact(passedId);
+  document.getElementById('firstName').value = currentContact.firstName;
+  document.getElementById('lastName').value = currentContact.lastName;
+  document.getElementById('email').value = currentContact.email;
+  document.getElementById('phone').value = currentContact.phone;
+  document.getElementById('reachOut').value = currentContact.reachOut;
+  document.getElementById('topic').value = currentContact.topic;
+  // document.getElementById('contactPhoto').value = currentContact.contactPhoto;
+}
