@@ -67,3 +67,8 @@ div {
   font-weight: lighter;
   color: white;
 }
+.inputForm{
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-top: 100px;
+}
