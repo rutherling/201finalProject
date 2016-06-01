@@ -7,16 +7,16 @@ function listOverdues () {
   // Create an array of overdue contacts
   var overdueArray = [];
   for (var i = 0; i < contactArray.length; i++) {
-    if (Date.parse(contactArray[i].details.next) < Date.parse(today)) {
+    if (Date.parse(contactArray[i].next) < Date.parse(today)) {
       overdueArray.push(contactArray[i]);
     }
   };
   //sort that array by how overdue they are
   var sortedOverdueArray = overdueArray.sort(function(a,b) {
-    if (Date.parse(a.details.next) > Date.parse(b.details.next)) {
+    if (Date.parse(a.next) > Date.parse(b.next)) {
       return -1;
     }
-    if (Date.parse(a.details.next) < Date.parse(b.details.next)) {
+    if (Date.parse(a.next) < Date.parse(b.next)) {
       return 1;
     }
     return 0;
@@ -41,18 +41,19 @@ function listNextDates () {
   //create an array of contacts who are not overdue
   var upcomingArray = [];
   for (var i = 0; i < contactArray.length; i++) {
-    if (Date.parse(contactArray[i].details.next) > Date.parse(today)) {
+    if (Date.parse(contactArray[i].next) > Date.parse(today)) {
       upcomingArray.push(contactArray[i]);
     }
   //sort that array by next contact point (contacts furthest in the future should be indexed last)
   var sortedNextArray = contactArray.sort(function(a,b) {
-    if (Date.parse(a.details.next) < Date.parse(b.details.next)) {
+    if (Date.parse(a.next) < Date.parse(b.next)) {
       return -1;
     }
-    if (Date.parse(a.details.next) > Date.parse(b.details.next)) {
+    if (Date.parse(a.next) > Date.parse(b.next)) {
       return 1;
     }
     return 0;
   })
+};
   return sortedNextArray;
 }

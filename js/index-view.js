@@ -4,11 +4,10 @@
 //Input: index from contactArray
 //Output: single <div> that holds everything
 //then for loop that appends them all to document.body
-for (var i = 0; i < contactArray.length; i++) {
-  var singleBubble = labelMaker(contactArray[i].details.topic,
-    contactArray[i].details.firstName,
-    contactArray[i].details.lastName);
+
+for (var i = 0; i < listNextDates().length; i++) {
+  var singleBubble = labelMaker(listNextDates()[i].topic,
+    listNextDates()[i].firstName,
+    listNextDates()[i].lastName);
   document.getElementById('timeline').appendChild(singleBubble);
 }
-
-//Next step: chronological order
