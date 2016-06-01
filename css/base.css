@@ -5,11 +5,17 @@ hr {
   width: 85%;
 }
 label{
-  display: list-item;
   margin-bottom: 5px;
-  /*left-right alignment? */
+  display: block;
 }
-
+label #topic{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#submitNew{
+  float: right;
+  margin-right: 15px;
+}
 html {
 font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
@@ -70,5 +76,7 @@ div {
 .inputForm{
   margin-left: 20%;
   margin-right: 10%;
-  margin-top: 100px;
+  margin-top: 45px;
+  /*justify-content: space-between;
+  flex: auto;*/
 }
