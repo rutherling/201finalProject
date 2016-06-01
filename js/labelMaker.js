@@ -1,12 +1,12 @@
-function labelMaker() {
+function labelMaker(topic, firstName, lastName) {
   console.log('Label Maker is running.');
   var noteDiv = document.createElement('div');
   noteDiv.setAttribute('class', 'ctctPlans');
-  noteDiv.textContent = 'Coffee at Metropol with Alicia, Danny and Pat\'s best friend from high school who I met at their beach place last summer';
+  noteDiv.textContent = topic;
 
   var nameDiv = document.createElement('div');
   nameDiv.setAttribute('class', 'ctctName');
-  nameDiv.textContent = contactArray[0].details.firstName + ' ' + contactArray[0].details.lastName;
+  nameDiv.textContent = firstName + ' ' + lastName;
 
   var innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'mini-text');
