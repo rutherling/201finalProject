@@ -2,15 +2,17 @@ var contactArray = [];
 // When a new Contact is created or imported from memory, it accepts an object literal
 //  which can have a wide variety of details. The only details that are mandatory are
 //  a first or last name.
-function Contact(detailsProp) {
-  this.details = detailsProp.details;
+function Contact(newInfo) {
+  for (property in newInfo) {
+    this[property] = newInfo[property];
+  }
   // If either of these are missing, the construction cannot proceed.
   if (this.sortName == '') {
     console.error('Error creating Contact:');
-    console.info(detailsProp);
+    console.info(newInfo);
     return;
   }
-  this.id = detailsProp.id;
+  this.id = newInfo.id;
 
   if (!this.id) {
     this.id = getUniqueId();
@@ -116,10 +118,7 @@ populateDemoContacts();
 function populateDemoContacts() {
   if (localStorage.length == 0) {
     for (var i = 0; i < demoContacts.length; i++) {
-      var contactLiteral = {
-        'details': demoContacts[i]
-      };
-      var newContact = new Contact(contactLiteral);
+      var newContact = new Contact(demoContacts[i]);
       contactArray.push(newContact);
     }
   }
