@@ -127,7 +127,7 @@ function populateDemoContacts() {
 // This should be an easy way to call a specific contact from the array by id
 function contact(id) {
   for (var i = 0; i < contactArray.length; i++) {
-    if (contactArray[i].id = id) {
+    if (contactArray[i].id == id) {
       return contactArray[i];
     }
   }
