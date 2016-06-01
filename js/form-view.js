@@ -20,6 +20,4 @@ function addContactFromForm(event) {
     var newContact = new Contact(submitObject);
     contactArray.push(newContact);
   }
-  //Write to DOM from contactArray
-  labelMaker();
 }

@@ -7,6 +7,7 @@ demoContacts = [
     'lastName': 'Custodio',
     'phone': '503-555-0123',
     'email': 'Stefania@example.com',
+    'topic': 'TEST TOPIC',
     'reachOut': '45',
     'next': '2016-05-20T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
