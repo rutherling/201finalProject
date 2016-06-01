@@ -6,14 +6,14 @@
 //then for loop that appends them all to document.body
 
 for (var i = 0; i < listNextDates().length; i++) {
-  var singleBubble = labelMaker(listNextDates()[i].topic,
-    listNextDates()[i].firstName,
-    listNextDates()[i].lastName);
+  var singleBubble = labelMaker(listNextDates()[i]);
   document.getElementById('timeline').appendChild(singleBubble);
 }
 
+// Populate overdue tray
 for (var i = 0; i < listOverdues().length; i++) {
-  if (i === 2) {
+  //stop displaying new bubbles and link to overdue view
+  if (i === 2) //{ Eventually, this should be set higher than 2
     var overdueLink = document.createElement('a');
     overdueLink.setAttribute('href', 'overdue.html');
     var doubleArrow = document.createElement('i');
@@ -23,9 +23,8 @@ for (var i = 0; i < listOverdues().length; i++) {
     document.getElementById('overdueCtcts').appendChild(overdueLink);
     break;
   }
-  var singleBubble = labelMaker('',
-    listOverdues()[i].firstName,
-    listOverdues()[i].lastName);
+  var singleBubble = labelMaker(listOverdues()[i]);
   singleBubble.style.opacity = 1 - (i / 8);
+
   document.getElementById('overdueCtcts').appendChild(singleBubble);
 }

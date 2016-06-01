@@ -6,8 +6,6 @@
 //then for loop that appends them all to document.body
 
 for (var i = 0; i < listOverdues().length; i++) {
-  var singleBubble = labelMaker(listOverdues()[i].topic,
-    listOverdues()[i].firstName,
-    listOverdues()[i].lastName);
+  var singleBubble = labelMaker(listOverdues()[i]);
   document.getElementById('overdueQueue').appendChild(singleBubble);
 }
