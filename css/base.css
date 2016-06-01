@@ -99,9 +99,13 @@ div {
   display: inline-block;
   background-color: red;
 }
+
 ::selection{
   background: blue;
 }
 ::-moz-selection{
   background: #ffb7b7;
+
+#doubleRight {
+  font-size: 29px;
 }
