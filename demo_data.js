@@ -3,7 +3,7 @@
 
 demoContacts = [
   {
-    'firstName': 'Stefania',
+    'firstName': '',
     'lastName': 'Custodio',
     'phone': '503-555-0123',
     'email': 'Stefania@example.com',
@@ -14,7 +14,7 @@ demoContacts = [
   },
   {
     'firstName': 'Kirstin',
-    'lastName': 'Innocent',
+    'lastName': '',
     'phone': '503-555-0123',
     'email': 'Kirstin@example.com',
     'reachOut': '90',
@@ -23,7 +23,7 @@ demoContacts = [
   },
   {
     'firstName': 'Cleo',
-    'lastName': 'Degroot',
+    'lastName': '',
     'phone': '503-555-0123',
     'email': 'Cleo@example.com',
     'reachOut': '60',
@@ -31,7 +31,7 @@ demoContacts = [
     'last': '2016-04-05T19:00:00.000Z'
   },
   {
-    'firstName': 'Alvina',
+    'firstName': '',
     'lastName': 'Woolverton',
     'phone': '503-555-0123',
     'email': 'Alvina@example.com',
