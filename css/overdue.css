@@ -8,5 +8,7 @@
 }
 
 .postponeButton {
-  width: 60%;
+  width: 95%;
+  font-size: 12px;
+  padding: 4px;
 }
