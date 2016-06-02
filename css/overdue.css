@@ -1,9 +1,13 @@
+#overdueQueue {
+  margin-top: 5%;
+}
+
 #bulkRemove, #bulkPostpone {
   display: inline;
 }
 
 .fa-times-circle {
-  font-size: 35px !important;
+  font-size: 300% !important;
   display: inline-block;
 }
 

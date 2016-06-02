@@ -20,31 +20,31 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(noteDiv);
   }
 
-  //Make alt div for contact avatar
-  var noPic = document.createElement('div');
-  noPic.setAttribute('class', 'altDiv ctctFaces');
-  var initString = function () {
-    var string = '';
-    if (contactObject.firstName) {
-      string += contactObject.firstName[0];
-    }
-    if (contactObject.firstName && contactObject.lastName) {
-      string += ' ';
-    }
-    if (contactObject.lastName) {
-      string += contactObject.lastName[0];
-    }
-    return string;
-  };
-  var initials = document.createTextNode(initString());
-  noPic.appendChild(initials);
-
   //Make img placeholder for contact avatar
   if (contactObject.photo) {
     var picture = document.createElement('img');
     picture.setAttribute('class', 'hasPic ctctFaces');
     picture.setAttribute('id','hasImg');
     picture.setAttribute('src', 'url ("../assets/Senior_Portrait_0067-478x700.jpg");');
+  } else {
+    //Make alt div for contact avatar
+    var noPic = document.createElement('div');
+    noPic.setAttribute('class', 'altDiv ctctFaces');
+    var initString = function () {
+      var string = '';
+      if (contactObject.firstName) {
+        string += contactObject.firstName[0];
+      }
+      if (contactObject.firstName && contactObject.lastName) {
+        string += ' ';
+      }
+      if (contactObject.lastName) {
+        string += contactObject.lastName[0];
+      }
+      return string;
+    };
+    var initials = document.createTextNode(initString());
+    noPic.appendChild(initials);
   }
 
   //Make postpone button if status is overdueList
