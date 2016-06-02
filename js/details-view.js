@@ -1,23 +1,32 @@
 document.getElementById('completeBtn').addEventListener('click', testing);
 document.getElementById('postponeBtn').addEventListener('click', testing);
-document.getElementById('editBtn').addEventListener('click', testing);
+document.getElementById('editBtn').addEventListener('click', redirectToEdit);
 document.getElementById('removeBtn').addEventListener('click', testing);
 
 function testing(event) {
-  console.log(event.target.id);
+  console.log(event);
 }
 
 var passedId = urlObject(window.url).parameters.id;
 
-populateDetails(passedId);
+populateDetails();
 
-function populateDetails(id) {
-  var currentContact = contact(id);
+function populateDetails() {
+  var currentContact = contact(passedId);
   for (key in currentContact) {
     var domElement = document.getElementById(key);
     if (currentContact[key] && domElement) {
-      domElement.innerText = currentContact[key];
+      if (typeof(currentContact[key]) == 'object') {
+        // Dates just show up as "objects"
+        domElement.innerText = currentContact[key].toDateString();
+      } else {
+        domElement.innerText = currentContact[key];
+      }
     }
   }
   document.getElementById('name').innerText = currentContact.firstName + ' ' + currentContact.lastName;
+}
+
+function redirectToEdit() {
+  window.location = 'form.html?id=' + passedId;
 }

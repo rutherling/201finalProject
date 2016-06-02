@@ -100,6 +100,8 @@ loadDataFromStorage();
 function loadDataFromStorage() {
   for (object in localStorage) {
     var newContact = new Contact(JSON.parse(localStorage[object]));
+    newContact.last = new Date(newContact.last);
+    newContact.next = new Date(newContact.next);
     contactArray.push(newContact);
   }
 }
