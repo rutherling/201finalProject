@@ -18,6 +18,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
 
 .ctctLabels {
+  height: 6rem;
   width:auto;
   margin:0.125rem 0 0 0;
   padding:0;
@@ -38,15 +39,15 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
 
 .ctctFaces {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 100%;
-  margin: 0.25rem;
+  margin: 1%;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
   color: white;
-  line-height: 2.5rem;
+  line-height: 4rem;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
 }
@@ -54,12 +55,13 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 .mini-text {
   display: inline-block;
   /*height: 3rem;*/
-  width: 85%;
+  width: 65%;
   margin-right: 5px;
-  border-radius: 0 25px 25px 0;
+  /*border-radius: 0 25px 25px 0;*/
   /*font-size: 0.75em;*/
   padding: 0.125rem;
   vertical-align: top;
+  margin: 0 5% 0 15%;
 }
 
 div {

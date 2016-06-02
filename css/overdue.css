@@ -9,10 +9,13 @@
 .fa-times-circle {
   font-size: 300% !important;
   display: inline-block;
+  float: right;
+  margin: 1%;
 }
 
 .postponeButton {
-  width: 95%;
+  width: 100%;
   font-size: 12px;
   padding: 4px;
+  /*float: right;*/
 }
