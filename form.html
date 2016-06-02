@@ -33,28 +33,28 @@
 <div class="mommaDiv">
   <form class="inputForm" action="form.html" method="post" id="theActualForm"> <!--change action tag?-->
     <div class="namesDiv">
-      <div class="firstName">
-        <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required"></input>
+      <div class="first">
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required" class="cool"></input>
       </div>
-      <div class="lastName">
-        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
+      <div class="last">
+        <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required" class="cool"></input>
       </div>
     </div>
 
   <div class="detailsDiv">
-    <input type="text" name="reachOut" id="reachOut" placeholder="10 days"></input>
+    <input type="text" name="reachOut" id="reachOut" placeholder="10 days" class="cool"></input>
     <div class="rightHalf">
       <div>
-        <input type="tel" name="phone" id="phone" placeholder="Phone ###-###-####" class="phone"></input>
+        <input type="tel" name="phone" id="phone" placeholder="Phone ###-###-####" class="phone cool"></input>
       </div>
       <div>
-        <input type="email" name="email" id="email" placeholder="Email example@email.com" class="email"></input>
+        <input type="email" name="email" id="email" placeholder="example@email.com" class="email cool"></input>
       </div>
     </div>
   </div>
 
-    <label for="topic">Topics<br><textarea placeholder="Conversation follow-ups, anniversary, birthday, gift ideas, prefers calls/text/email" rows="3" cols="35" type="text" name="topic" id="topic"></textarea></label>
-    <label for="photo">Link to Photo <input size="47px" type="url" name="photo" id="photo" placeholder="https://goo.gl/photos/SNsWBFnLd7Wb7udKA">
+    <label for="topic"><br><textarea placeholder="Conversation follow-ups, anniversary, birthday, gift ideas, prefers calls/text/email" rows="3" cols="35" type="text" name="topic" id="topic" class="cool"></textarea></label>
+    <label for="photo"><input size="47px" type="url" name="photo" id="photo" placeholder="Link to photo" class="cool">
     </input></label>
     <input type="submit" name="addContact" value="Save" id="submitNew" class="doneButton detailsButton btn btn-default btn-lg"></input>
   </form>

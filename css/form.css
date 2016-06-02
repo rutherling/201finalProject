@@ -3,6 +3,23 @@ input {
   font-weight: 500;
   letter-spacing: .6px;
 }
+/*input[type="text"], textarea {
+  background-color : black;
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}*/
+.cool{
+  background-color : black;
+  color: white;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-left: 10px;
+}
 .mommaDiv{
   margin-top: 105px;
 }
@@ -19,11 +36,13 @@ input {
 ::-moz-selection{
   background: #ffb7b7;
 }
+#photo{
+  width: 100%;
+}
 .namesDiv {
-  border: 1px white solid;
-  width: 95%;
+  width: 100%;
   height: 2rem;
-  margin: 10px;
+  margin: 0;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 700;
@@ -31,12 +50,19 @@ input {
   display: flex;
   justify-content: space-between;
 }
-.firstName{
+.first{
   flex-grow: 0;
-  width: 100%
+  width: 50%
 }
-.lastName{
+#firstName{
+  width:100%;
+}
+.last{
   flex-grow: 0;
+  width: 50%;
+}
+#lastName{
+  width: 100%;
 }
 .detailsDiv{
   display: flex;
@@ -62,10 +88,11 @@ input {
 }
 #reachOut{
   border-radius: 100%;
-  height: 62px;
-  width: 62px;
+  height: 80px;
+  width: 80px;
   /*flex-grow: 1;*/
   margin: auto;
+  text-align: center;
 }
 .lefthalf {
   float: left;
@@ -78,9 +105,9 @@ label{
 }
 #topic {
   border: 1px white solid;
-  width: 96.5%;
+  width: 100%;
   height: 5rem;
-  margin: 10px;
+  margin: 0;
   padding: 3px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -100,4 +127,11 @@ label{
   /*align-items: center;*/
   /*text-align: center;*/
   padding:1% 41%;
+  margin-bottom: 20px;
+}
+::selection{
+  background: #42dca3;
+}
+::-moz-selection{
+  background: #42dca3;
 }
