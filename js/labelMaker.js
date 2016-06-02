@@ -1,9 +1,3 @@
-// document.addEventListener('click', function() {
-//   // console.log(event.target.ctctLabels.id);
-//   event.stopPropagation();
-//   console.log(this.id);
-// }, false);
-
 function labelMaker (contactObject, status) {
   //Make div to display contact topic excerpt
   console.log('Label Maker is running.');
@@ -59,10 +53,24 @@ function labelMaker (contactObject, status) {
     postDiv.setAttribute('class', 'postponeButton btn btn-default btn-lg');
     postDiv.textContent = 'Postpone';
     innerDiv.appendChild(postDiv);
+    postDiv.addEventListener('click', function() {
+      console.log('postponeContact called');
+    }, false);
+  //Make done button
+    var doneDiv = document.createElement('div');
+    doneDiv.setAttribute('class', 'doneButton btn btn-default btn-lg');
+    doneDiv.textContent = 'Complete';
+    innerDiv.appendChild(doneDiv);
+    postDiv.addEventListener('click', function() {
+      console.log('doneContact called');
+    }, false);
   //Make remove button if status is overdueList
     var killDiv = document.createElement('i');
     killDiv.setAttribute('class', 'fa fa-times-circle');
     innerDiv.appendChild(killDiv);
+    killDiv.addEventListener('click', function() {
+      console.log('removeContact called');
+    }, false);
   }
 
   //Make containing div for contact label
