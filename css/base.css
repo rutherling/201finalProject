@@ -1,7 +1,107 @@
 .fa {
   font-size: 48px;
 }
-
 hr {
   width: 85%;
+}
+/*label{
+  display: block;
+  margin-bottom: 5px;*/
+}
+/*label #topic{
+  overflow: hidden;
+  text-overflow: ellipsis;
+}*/
+
+html {
+font-family: Montserrat,"Helvetica Neue",sans-serif;
+}
+
+.ctctLabels {
+  height: 6rem;
+  width:auto;
+  margin:0.125rem 0 0 0;
+  padding:0;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.altDiv {
+  /*position:absolute;*/
+  display: inline-block;
+  background-color: skyblue;
+  background-position: center;
+  background-size: cover;
+}
+
+.hasImg {
+  position:relative;
+}
+
+.ctctFaces {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100%;
+  margin: 1%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  line-height: 4rem;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+}
+
+.mini-text {
+  display: inline-block;
+  /*height: 3rem;*/
+  width: 65%;
+  margin-right: 5px;
+  /*border-radius: 0 25px 25px 0;*/
+  /*font-size: 0.75em;*/
+  padding: 0.125rem;
+  vertical-align: top;
+  margin: 0 5% 0 15%;
+}
+
+div {
+  /*margin: 0;*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ctctName {
+  display: block;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px
+  margin: 0.25rem 0 0 0;
+}
+
+.ctctPlans {
+  display: block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  letter-spacing: .6px;}
+
+#overdueCtcts {
+  margin: 100px auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+#overdueCtcts div {
+  display: inline-block;
+  background-color: red;
+}
+::selection{
+  background: blue;
+}
+::-moz-selection{
+  background: #ffb7b7;
+}
+
+#doubleRight {
+  font-size: 29px;
 }

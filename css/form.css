@@ -1,0 +1,103 @@
+input {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  letter-spacing: .6px;
+}
+.mommaDiv{
+  margin-top: 105px;
+}
+.inputForm{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  /*justify-content: space-between;*/
+}
+::selection{
+  background: blue;
+}
+::-moz-selection{
+  background: #ffb7b7;
+}
+.namesDiv {
+  border: 1px white solid;
+  width: 95%;
+  height: 2rem;
+  margin: 10px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+.firstName{
+  flex-grow: 0;
+  width: 100%
+}
+.lastName{
+  flex-grow: 0;
+}
+.detailsDiv{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.righthalf {
+  /*width: 50%;*/
+  /*float: right;*/
+  /*border: 1px white solid;*/
+  /*margin-left: 50%;*/
+  /*height: 100%;*/
+  display: flex;
+  /*justify-content: flex-end;*/
+  flex-direction: column;
+  flex-grow: 1;
+}
+.phone {
+  width: 225px;
+}
+.email {
+  width: 225px;
+}
+#reachOut{
+  border-radius: 100%;
+  height: 62px;
+  width: 62px;
+  /*flex-grow: 1;*/
+  margin: auto;
+}
+.lefthalf {
+  float: left;
+  border: 1px white solid;
+  width: 48%;
+  height: 100%;
+}
+label{
+  width: 100%
+}
+#topic {
+  border: 1px white solid;
+  width: 96.5%;
+  height: 5rem;
+  margin: 10px;
+  padding: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.smallflex {
+  clear: both;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#submitNew{
+  /*margin-left: 260px;*/
+  clear: both;
+  display: flex;
+  position: relative;
+  /*align-content: center;*/
+  /*align-items: center;*/
+  /*text-align: center;*/
+  padding:1% 41%;
+}

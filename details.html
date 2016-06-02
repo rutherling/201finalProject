@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Details Card</title>
+  <link href="vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="vendor/bootstrap/css/grayscale.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="css/base.css" rel="stylesheet">
+  <link href="css/details.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class='baseBallCard'>
+    <p class="name" id="name"></p>
+    <p class="topic" id="topic"></p>
+    <section class="midface">
+      <div class="lefthalf">
+        <div class="circle">
+          <p class="nextContact" id="reachOut"></p>
+        </div>
+      </div>
+      <div class="righthalf">
+        <p class='phoneNumber' id="phone"></p>
+        <p class='email' id="email"></p>
+      </div>
+    </section>
+    <section style="clear: both">
+      <p class="topic">Last contact: <span id="last"></span></p>
+      <p class="topic">Next scheduled: <span id="next"></span></p>
+      <div>
+        <div class="doneButton detailsButton btn btn-default btn-lg" id="completeBtn">Complete</div>
+        <div class="postponeButton detailsButton btn btn-default btn-lg" id="postponeBtn">Postpone:
+        <input class="btn btn-default btn-lg" type="text" maxlength="3" size="4" required="required" value="7" id="postponeAmt"></div>
+      </div>
+      <div class="smallflex">
+        <div class="editButton detailsButton btn btn-default btn-lg" id="editBtn">Edit</div>
+        <div class="removeButton detailsButton btn btn-default" id="removeBtn">Remove</div>
+      </div>
+    </section>
+  </div>
+</body>
+
+<!-- jQuery -->
+<script src="vendor/bootstrap/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/bootstrap/js/jquery.easing.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="vendor/bootstrap/js/grayscale.js"></script>
+
+<!-- HTML Inclusion JavaScript -->
+<script src="http://www.w3schools.com/lib/w3data.js"></script>
+<script>
+w3IncludeHTML();
+</script>
+<!-- 10 - 20 dummy records -->
+<script src="demo_data.js" type="text/javascript"></script>
+<!--data model ; creates demo contacts when localstorage is empty-->
+<script src="js/model.js" type="text/javascript"></script>
+<!-- found script that makes it easy to get arguments from the URL -->
+<script src="js/url-parse.js" type="text/javascript"></script>
+<!--calls page-specific JavaScript -->
+<script src="js/details-view.js" type="text/javascript"></script>
+
+</html>
