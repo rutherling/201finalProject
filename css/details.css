@@ -54,7 +54,7 @@ p {
   /*margin-left: 50%;*/
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .lefthalf {
@@ -93,7 +93,11 @@ p {
   /*height: 100%;*/
   display: inline-block;
 }
+
 .email, .phone{
   display: block;
+}
 
+#postponeAmt {
+  text-align: center;
 }

@@ -21,20 +21,22 @@ function Contact(newInfo) {
 // Each object has the ability and responsibility to save itself to persistent storage.
 Contact.prototype.save = function() {
   localStorage[this.id] = JSON.stringify(this);
+  var arrayId = lookup(this.id);
+  if (arrayId) {
+    contactArray[arrayId] = this;
+  } else {
+    contactArray.push(this);
+  }
 };
 
 // This method takes a number of days and pushes off the next scheduled contact
 //  day until that many days after today.
 Contact.prototype.postpone = function(days) {
   var newDate = new Date();
-  newDate.setDate(newDate.getDate() + days);
-  newDate.setHours(
-    this.next.getHours(),
-    this.next.getMinutes(),
-    this.next.getSeconds(),
-    this.next.getMilliseconds()
-  );
+  // You have to force everything to be a number or it will concatonate! Yay, JavaScript!
+  newDate.setDate( (Number(newDate.getDate()) + Number(days)) );
   this.next = newDate;
+  this.save();
 };
 
 // When the user hits "done" on a contact, it's basically the same as postponing
@@ -42,6 +44,7 @@ Contact.prototype.postpone = function(days) {
 //  such as number of times postponed vs reset, and we re-examine this method at
 //  that time.
 Contact.prototype.reset = function() {
+  this.last = new Date();
   this.postpone(this.reachOut);
 };
 
@@ -98,6 +101,8 @@ loadDataFromStorage();
 function loadDataFromStorage() {
   for (object in localStorage) {
     var newContact = new Contact(JSON.parse(localStorage[object]));
+    newContact.last = new Date(newContact.last);
+    newContact.next = new Date(newContact.next);
     contactArray.push(newContact);
   }
 }
@@ -132,6 +137,8 @@ function populateDemoContacts() {
   if (localStorage.length == 0) {
     for (var i = 0; i < demoContacts.length; i++) {
       var newContact = new Contact(demoContacts[i]);
+      newContact.last = new Date(newContact.last);
+      newContact.next = new Date(newContact.next);
       contactArray.push(newContact);
     }
   }
