@@ -87,8 +87,10 @@ function labelMaker (contactObject, status) {
   if (killDiv) {
     bubble.appendChild(killDiv);
   };
-  bubble.addEventListener('click', function() {
-    console.log(event.target.id);
-  }, false);
+  bubble.addEventListener('click', navigateToDetailView, false);
   return bubble;
+}
+
+function navigateToDetailView(event) {
+  window.location = 'details.html?id=' + event.target.id;
 }
