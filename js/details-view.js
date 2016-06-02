@@ -12,7 +12,7 @@ var passedId = urlObject(window.url).parameters.id;
 populateDetails();
 
 function populateDetails() {
-  var currentContact = contactArray[contact(passedId)];
+  var currentContact = contactArray[lookup(passedId)];
   for (key in currentContact) {
     var domElement = document.getElementById(key);
     if (currentContact[key] && domElement) {
@@ -32,7 +32,7 @@ function redirectToEdit() {
 }
 
 function completeAction() {
-  var currentContact = contact(passedId);
+  var currentContact = lookup(passedId);
   console.log(currentContact);
   contactArray[currentContact].reset;
   window.location.reload;

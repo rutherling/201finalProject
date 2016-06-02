@@ -4,17 +4,15 @@
 hr {
   width: 85%;
 }
-label{
+/*label{
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px;*/
 }
-label #topic{
+/*label #topic{
   overflow: hidden;
   text-overflow: ellipsis;
-}
-#submitNew{
-  margin-left: 260px;
-}
+}*/
+
 html {
 font-family: Montserrat,"Helvetica Neue",sans-serif;
 }
@@ -84,11 +82,7 @@ div {
   font-weight: lighter;
   color: white;
 }
-.inputForm{
-  margin-left: 20%;
-  margin-right: 10%;
-  margin-top: 45px;
-}
+
 #overdueCtcts {
   margin: 100px auto 0 auto;
   display: flex;
@@ -99,7 +93,6 @@ div {
   display: inline-block;
   background-color: red;
 }
-
 ::selection{
   background: blue;
 }
