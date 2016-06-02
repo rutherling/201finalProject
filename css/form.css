@@ -12,7 +12,7 @@ input {
   letter-spacing: 1px;
 }*/
 .cool{
-  background-color : black;
+  background-color : rgb(204, 51, 0);
   color: white;
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -31,10 +31,10 @@ input {
   /*justify-content: space-between;*/
 }
 ::selection{
-  background: blue;
+  background: white;
 }
 ::-moz-selection{
-  background: #ffb7b7;
+  background: white;
 }
 #photo{
   width: 100%;
@@ -128,10 +128,4 @@ label{
   /*text-align: center;*/
   padding:1% 41%;
   margin-bottom: 20px;
-}
-::selection{
-  background: #42dca3;
-}
-::-moz-selection{
-  background: #42dca3;
 }

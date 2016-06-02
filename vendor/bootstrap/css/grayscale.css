@@ -54,7 +54,7 @@ p {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: rgb(147,203,220);
 }
 
 .navbar-custom .navbar-brand {
@@ -275,17 +275,17 @@ p {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
-    background-color: transparent;
+    border: 1px solid rgba(27, 146, 101, .6);
+    color: rgba(27, 146, 101, .9);
+    background-color: rgba(255,255,255,.1);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1.5px solid rgba(27, 146, 101, .6);
     outline: 0;
-    color: #000;
-    background-color: #42dca3;
+    color: #FFF;
+    background-color: rgba(27, 146, 101, .6);
 }
 
 ul.banner-social-buttons {
