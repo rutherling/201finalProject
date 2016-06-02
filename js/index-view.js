@@ -8,7 +8,7 @@
 // Populate overdue tray
 for (var i = 0; i < listOverdues().length; i++) {
   //stop displaying new bubbles and link to overdue view
-  if (i === 2) { // Eventually, this should be set higher than 2
+  if (i === 4) { // Eventually, this should be set higher than 2
     var overdueLink = document.createElement('a');
     overdueLink.setAttribute('href', 'overdue.html');
     var doubleArrow = document.createElement('i');
@@ -19,6 +19,6 @@ for (var i = 0; i < listOverdues().length; i++) {
     break;
   }
   var singleBubble = labelMaker(listOverdues()[i], 'overdueTray');
-  singleBubble.style.opacity = 1 - (i / 8);
+  singleBubble.style.opacity = 1 - (i / 4);
   document.getElementById('overdueCtcts').appendChild(singleBubble);
 }
