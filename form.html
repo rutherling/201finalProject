@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-
   <!-- Custom Fonts -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +12,6 @@
 
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <script src="https://use.fontawesome.com/50ce0c99e2.js"></script>
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -25,8 +21,7 @@
     <!-- Custom Fonts -->
     <link href="vendor/bootstrap/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--Styling to fit info together in a bubble-->
-    <link href="css/base.css" rel="stylesheet" type="text/css">
-    <link href="css/details.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -36,11 +31,12 @@
 
 <!-- Content -->
 <div class="mommaDiv">
-  <form class="inputForm" action="index.html" method="post" id="theActualForm"> <!--change action tag?-->
-    <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required">
-    </input>
-    <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required">
-  </input><br>
+  <form class="inputForm baseBallCard" action="index.html" method="post" id="theActualForm"> <!--change action tag?-->
+    <div class="namesDiv">
+      <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required"></input>
+      <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
+    </div>
+
   <div class="rightHalf">
     <input type="email" name="email" id="email" placeholder="Email example@email.com" class="email">
     </input>
@@ -115,7 +111,7 @@
     <!--Stores input form to contactArray-->
     <!-- <script src="js/app.js" type="text/javascript"></script> -->
     <!--Writes new <div> from contactArray to index.html DOM-->
-    <script src="js/labelMaker.js" type="text/javascript"></script>
+    <!-- <script src="js/labelMaker.js" type="text/javascript"></script> -->
     <!--calls LabelMaker and appends children to specific parent div-->
     <script src="js/form-view.js" type="text/javascript"></script>
 
