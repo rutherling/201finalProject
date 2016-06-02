@@ -7,7 +7,7 @@ demoContacts = [
     'lastName': 'Custodio',
     'phone': '503-555-0123',
     'email': 'Stefania@example.com',
-    'topic': 'TEST TOPIC',
+    'topic': 'Lorem ipsum dolor sit amet',
     'reachOut': '45',
     'next': '2016-05-20T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
@@ -26,6 +26,7 @@ demoContacts = [
     'lastName': '',
     'phone': '503-555-0123',
     'email': 'Cleo@example.com',
+    'topic': 'Consectetur adipisicing elit',
     'reachOut': '60',
     'next': '2016-05-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
@@ -35,6 +36,7 @@ demoContacts = [
     'lastName': 'Woolverton',
     'phone': '503-555-0123',
     'email': 'Alvina@example.com',
+    'topic': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     'reachOut': '30',
     'next': '2016-05-28T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
@@ -53,6 +55,7 @@ demoContacts = [
     'lastName': 'Carrithers',
     'phone': '503-555-0123',
     'email': 'Milly@example.com',
+    'topic': 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     'reachOut': '30',
     'next': '2016-06-04T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
@@ -71,6 +74,7 @@ demoContacts = [
     'lastName': 'Dunne',
     'phone': '503-555-0123',
     'email': 'Gema@example.com',
+    'topic': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'reachOut': '60',
     'next': '2016-06-05T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z'
