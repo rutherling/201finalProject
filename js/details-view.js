@@ -34,6 +34,6 @@ function redirectToEdit() {
 function completeAction() {
   var currentContact = lookup(passedId);
   console.log(currentContact);
-  contactArray[currentContact].reset;
-  window.location.reload;
+  contactArray[currentContact].reset();
+  window.location.reload(true);
 }
