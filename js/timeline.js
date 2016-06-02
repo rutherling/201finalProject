@@ -31,7 +31,7 @@ for (var i = 0; i < listNextDates().length; i++) {
     console.log('Appending new dateDiv:' + workingDate);
     var dateDiv = document.createElement('div');
     dateDiv.setAttribute('class', 'dateDiv');
-    dateDiv.textContent = workingDate;
+    dateDiv.textContent = workingDate.toDateString();
     document.getElementById('timeline').appendChild(dateDiv);
     // Append bubble
     var singleBubble = labelMaker(listNextDates()[i], '');

@@ -1,17 +1,6 @@
 .fa {
   font-size: 48px;
 }
-hr {
-  width: 85%;
-}
-/*label{
-  display: block;
-  margin-bottom: 5px;*/
-}
-/*label #topic{
-  overflow: hidden;
-  text-overflow: ellipsis;
-}*/
 
 html {
 font-family: Montserrat,"Helvetica Neue",sans-serif;
@@ -19,9 +8,9 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 
 .ctctLabels {
   height: 6rem;
-  width:auto;
-  margin:0.125rem 0 0 0;
-  padding:0;
+  width:50%;
+  margin:0.125rem 0 1rem 0;
+  /*padding-left: : 20%;*/
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -56,12 +45,11 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   display: inline-block;
   /*height: 3rem;*/
   width: 65%;
-  margin-right: 5px;
   /*border-radius: 0 25px 25px 0;*/
   /*font-size: 0.75em;*/
   padding: 0.125rem;
   vertical-align: top;
-  margin: 0 5% 0 15%;
+  margin: 0 5% 0 23%;
 }
 
 div {
@@ -77,6 +65,7 @@ div {
   font-weight: 700;
   letter-spacing: 1px
   margin: 0.25rem 0 0 0;
+  /*opacity: 0;*/
 }
 
 .ctctPlans {
@@ -93,7 +82,9 @@ div {
 
 #overdueCtcts div {
   display: inline-block;
-  background-color: red;
+  /*background-color: rgba(162,62,38,1);*/
+  background-color: skyblue;
+  /*opacity: .4;*/
 }
 ::selection{
   background: #42dca3;
@@ -105,3 +96,7 @@ div {
 #doubleRight {
   font-size: 29px;
 }
+/*.timeline{
+  margin-left: 20%;
+  margin-right: 20%;
+}*/
