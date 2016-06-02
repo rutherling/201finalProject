@@ -33,10 +33,10 @@
 <div class="mommaDiv">
   <form class="inputForm" action="form.html" method="post" id="theActualForm"> <!--change action tag?-->
     <div class="namesDiv">
-      <div>
+      <div class="firstName">
         <input type="text" name="firstName" id="firstName" placeholder="First Name" required="required"></input>
       </div>
-      <div>
+      <div class="lastName">
         <input type="text" name="lastName" id="lastName" placeholder="Last Name" required="required"></input>
       </div>
     </div>
@@ -54,7 +54,7 @@
   </div>
 
     <label for="topic">Topics<br><textarea placeholder="Conversation follow-ups, anniversary, birthday, gift ideas, prefers calls/text/email" rows="3" cols="35" type="text" name="topic" id="topic"></textarea></label>
-    <label for="photo">Link to Photo <input type="url" name="photo" id="photo">
+    <label for="photo">Link to Photo <input size="47px" type="url" name="photo" id="photo" placeholder="https://goo.gl/photos/SNsWBFnLd7Wb7udKA">
     </input></label>
     <input type="submit" name="addContact" value="Save" id="submitNew" class="doneButton detailsButton btn btn-default btn-lg"></input>
   </form>
