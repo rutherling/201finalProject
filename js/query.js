@@ -20,7 +20,7 @@ function listOverdues () {
       return 1;
     }
     return 0;
-  })
+  });
   return sortedOverdueArray;
 };
 
@@ -44,6 +44,7 @@ function listNextDates () {
     if (Date.parse(contactArray[i].next) > Date.parse(today)) {
       upcomingArray.push(contactArray[i]);
     }
+  };
   //sort that array by next contact point (contacts furthest in the future should be indexed last)
   var sortedNextArray = upcomingArray.sort(function(a,b) {
     if (Date.parse(a.next) < Date.parse(b.next)) {
@@ -53,7 +54,7 @@ function listNextDates () {
       return 1;
     }
     return 0;
-  })
-};
+  });
+
   return sortedNextArray;
 }

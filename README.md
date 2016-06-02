@@ -10,4 +10,4 @@ The user clicks on the contact's face to see a quick view of their information. 
 The overdue page is in descending chronological order. From here, a user can complete, remove, or postpone contacts in bulk.
 
 DEMO PAGE:
-[GitHub GH-page](http://rutherling.github.io/201finalProject)
+http://rutherling.github.io/201finalProject

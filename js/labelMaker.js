@@ -1,6 +1,5 @@
 function labelMaker (contactObject, status) {
   //Make div to display contact topic excerpt
-  console.log('Label Maker is running.');
   if ((status != 'overdueTray') && (status != 'overdueList')) {
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'ctctPlans');
