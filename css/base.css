@@ -18,7 +18,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 .altDiv {
   /*position:absolute;*/
   display: inline-block;
-  background-color: skyblue;
+  background-color: skyblue !important;
   background-position: center;
   background-size: cover;
 }
@@ -83,7 +83,7 @@ div {
 #overdueCtcts div {
   display: inline-block;
   /*background-color: rgba(162,62,38,1);*/
-  background-color: rgb(147,203,220);
+  background-color: rgb(190, 220, 233);
   /*opacity: .4;*/
 }
 ::selection{
@@ -94,7 +94,7 @@ div {
 }
 
 #doubleRight {
-  font-size: 29px;
+  font-size: 29px !important;
 }
 
 .timeline {
