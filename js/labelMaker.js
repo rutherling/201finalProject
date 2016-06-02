@@ -1,3 +1,7 @@
+document.addEventListener('click', function() {
+  console.log(event.target);
+}, false);
+
 function labelMaker (contactObject, status) {
   //Make div to display contact topic excerpt
   console.log('Label Maker is running.');
@@ -62,6 +66,7 @@ function labelMaker (contactObject, status) {
   //Make containing div for contact label
   var bubble = document.createElement('div');
   bubble.setAttribute('class', 'ctctLabels');
+  bubble.setAttribute('id', contactObject.id);
   bubble.appendChild(noPic);
   if (contactObject.photo) {
     bubble.appendChild(picture);
