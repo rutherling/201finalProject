@@ -23,6 +23,12 @@ function Contact(newInfo) {
 // Each object has the ability and responsibility to save itself to persistent storage.
 Contact.prototype.save = function() {
   localStorage[this.id] = JSON.stringify(this);
+  var arrayId = contact(this.id);
+  if (arrayId) {
+    contactArray[arrayId] = this;
+  } else {
+    contactArray.push(this);
+  }
 };
 
 // This method takes a number of days and pushes off the next scheduled contact
@@ -37,6 +43,7 @@ Contact.prototype.postpone = function(days) {
     this.next.getMilliseconds()
   );
   this.next = newDate;
+  this.save();
 };
 
 // When the user hits "done" on a contact, it's basically the same as postponing
@@ -44,6 +51,7 @@ Contact.prototype.postpone = function(days) {
 //  such as number of times postponed vs reset, and we re-examine this method at
 //  that time.
 Contact.prototype.reset = function() {
+  this.last = new Date();
   this.postpone(this.reachOut);
 };
 
@@ -126,11 +134,12 @@ function populateDemoContacts() {
   }
 }
 
-// This should be an easy way to call a specific contact from the array by id
+// This should be an easy way to call a specific contact from the array by id.
+//  Example use: var currentContact = contactArray[contact(15)];
 function contact(id) {
   for (var i = 0; i < contactArray.length; i++) {
     if (contactArray[i].id == id) {
-      return contactArray[i];
+      return i;
     }
   }
   return false;

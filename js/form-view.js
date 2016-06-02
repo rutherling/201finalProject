@@ -31,7 +31,7 @@ if (passedId) {
 }
 
 function populateFormValues(passedId) {
-  var currentContact = contact(passedId);
+  var currentContact = contactArray[contact(passedId)];
   for (key in currentContact) {
     if (currentContact[key]) {
       document.getElementById(key).value = currentContact[key];

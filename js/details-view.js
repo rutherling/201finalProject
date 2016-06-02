@@ -1,4 +1,4 @@
-document.getElementById('completeBtn').addEventListener('click', testing);
+document.getElementById('completeBtn').addEventListener('click', completeAction);
 document.getElementById('postponeBtn').addEventListener('click', testing);
 document.getElementById('editBtn').addEventListener('click', redirectToEdit);
 document.getElementById('removeBtn').addEventListener('click', testing);
@@ -12,7 +12,7 @@ var passedId = urlObject(window.url).parameters.id;
 populateDetails();
 
 function populateDetails() {
-  var currentContact = contact(passedId);
+  var currentContact = contactArray[contact(passedId)];
   for (key in currentContact) {
     var domElement = document.getElementById(key);
     if (currentContact[key] && domElement) {
@@ -29,4 +29,11 @@ function populateDetails() {
 
 function redirectToEdit() {
   window.location = 'form.html?id=' + passedId;
+}
+
+function completeAction() {
+  var currentContact = contact(passedId);
+  console.log(currentContact);
+  contactArray[currentContact].reset;
+  window.location.reload;
 }
