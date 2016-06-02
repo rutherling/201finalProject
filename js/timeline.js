@@ -22,13 +22,13 @@ for (var i = 0; i < listNextDates().length; i++) {
     //  Append bubble
     var singleBubble = labelMaker(listNextDates()[i], '');
     document.getElementById('timeline').appendChild(singleBubble);
-    console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + 'bubble.');
+    // console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + 'bubble.');
   } else {
     // Update workingDate
     workingDate = new Date(listNextDates()[i].next);
-    console.log('workingDate is now ' + workingDate);
+    // console.log('workingDate is now ' + workingDate);
     // Append new date div
-    console.log('Appending new dateDiv:' + workingDate);
+    // console.log('Appending new dateDiv:' + workingDate);
     var dateDiv = document.createElement('div');
     dateDiv.setAttribute('class', 'dateDiv');
     dateDiv.textContent = workingDate.toDateString();
@@ -36,6 +36,6 @@ for (var i = 0; i < listNextDates().length; i++) {
     // Append bubble
     var singleBubble = labelMaker(listNextDates()[i], '');
     document.getElementById('timeline').appendChild(singleBubble);
-    console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + '\'s bubble.');
+    // console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + '\'s bubble.');
   }
 }
