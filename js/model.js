@@ -18,11 +18,15 @@ function Contact(newInfo) {
   this.save();
 }
 
-// Each object has the ability and responsibility to save itself to persistent storage.
+// Saving makes changes permenent in both localStorage and the working array.
 Contact.prototype.save = function() {
+  // Whether the contact is new or not, this object call will work. Which is nice.
   localStorage[this.id] = JSON.stringify(this);
+  // This is the code that determines whether a contact needs to be changed or added to the array.
+  //  After getting this to work, I think it might be good to ditch the array and go
+  //  for a fully object based memory structure. Maybe.
   var arrayId = lookup(this.id);
-  if (arrayId) {
+  if (arrayId !== false) {
     contactArray[arrayId] = this;
   } else {
     contactArray.push(this);
@@ -101,9 +105,10 @@ loadDataFromStorage();
 function loadDataFromStorage() {
   for (object in localStorage) {
     var newContact = new Contact(JSON.parse(localStorage[object]));
+    // This next part fixes the dates from strings to date objects.
     newContact.last = new Date(newContact.last);
     newContact.next = new Date(newContact.next);
-    contactArray.push(newContact);
+    newContact.save();
   }
 }
 
@@ -113,7 +118,7 @@ function addContact(submitObject) {
   if (!submitObject.id) {
     // construct and push object to array
     var newContact = new Contact(submitObject);
-    contactArray.push(newContact);
+    // contactArray.push(newContact);
   } else {
     var arrayPosition = lookup(submitObject.id);
     var savedContact = contactArray[arrayPosition];
@@ -137,9 +142,10 @@ function populateDemoContacts() {
   if (localStorage.length == 0) {
     for (var i = 0; i < demoContacts.length; i++) {
       var newContact = new Contact(demoContacts[i]);
+      // This next part fixes the dates from strings to date objects.
       newContact.last = new Date(newContact.last);
       newContact.next = new Date(newContact.next);
-      contactArray.push(newContact);
+      newContact.save();
     }
   }
 }
