@@ -8,11 +8,12 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 
 .ctctLabels {
   height: 6rem;
-  width:50%;
+  width: 50%;
   margin:0.125rem 1rem 1rem 0;
-  /*padding-left: : 20%;*/
+  padding-left: : 20%;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.5);
+  min-width: 450px;
 }
 
 .altDiv {
@@ -31,7 +32,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   height: 4rem;
   width: 4rem;
   border-radius: 100%;
-  margin: 1%;
+  margin: 10px;
   display: inline-block;
   text-align: center;
   vertical-align: middle;
@@ -49,7 +50,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   /*font-size: 0.75em;*/
   padding: 0.125rem;
   vertical-align: top;
-  margin: 0 5% 0 23%;
+  margin: 0 5% 0 0;
 }
 
 div {
@@ -85,6 +86,7 @@ div {
   /*background-color: rgba(162,62,38,1);*/
   background-color: rgb(190, 220, 233);
   /*opacity: .4;*/
+  min-width: 0px;
 }
 ::selection{
   background: #42dca3;
@@ -94,21 +96,22 @@ div {
 }
 
 #doubleRight {
-  font-size: 29px !important;
+  font-size: 60px !important;
 }
 
 .timeline {
-  margin-left: 14%;
+  margin-left: 10%;
   border-left: 1px solid white;
   padding-left: 2%;
 }
 
 .dateDiv {
   position: relative;
-  right: 14.1%;
+  right: 13.1%;
   border-bottom: 1px dashed white;
   margin-bottom: 1rem;
   background-color: #E1B378;
+  padding: .3rem;
 }
 
 @media(min-width:768px) {
@@ -130,7 +133,7 @@ div {
 }
 
 a {
-    color: #42dca3;
+    color: rgba(27, 146, 101, .6);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -139,7 +142,7 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #1d9b6c;
+    color: #fff;
 }
 
 #contactList {
@@ -148,4 +151,10 @@ a:focus {
 
 #overdueQueue {
   margin: 100px 10% 0 10% !important;
+}
+
+footer {
+  opacity: .3;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bolder;
 }
