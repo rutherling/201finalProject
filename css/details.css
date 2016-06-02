@@ -90,3 +90,7 @@ p {
   /*height: 100%;*/
   display: inline-block;
 }
+
+#postponeAmt {
+  text-align: center;
+}
