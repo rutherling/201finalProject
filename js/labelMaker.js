@@ -55,6 +55,7 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(postDiv);
     postDiv.addEventListener('click', function() {
       console.log('postponeContact called');
+      // TODO: postponeAction();
     }, false);
   //Make done button
     var doneDiv = document.createElement('div');
@@ -62,7 +63,8 @@ function labelMaker (contactObject, status) {
     doneDiv.textContent = 'Complete';
     innerDiv.appendChild(doneDiv);
     postDiv.addEventListener('click', function() {
-      console.log('doneContact called');
+      console.log('completeAction called');
+      // TODO: completeAction();
     }, false);
   //Make remove button if status is overdueList
     var killDiv = document.createElement('i');
@@ -70,6 +72,7 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(killDiv);
     killDiv.addEventListener('click', function() {
       console.log('removeContact called');
+      // TODO: removeContact();
     }, false);
   }
 
