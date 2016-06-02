@@ -1,6 +1,8 @@
-document.addEventListener('click', function() {
-  console.log(event.target);
-}, false);
+// document.addEventListener('click', function() {
+//   // console.log(event.target.ctctLabels.id);
+//   event.stopPropagation();
+//   console.log(this.id);
+// }, false);
 
 function labelMaker (contactObject, status) {
   //Make div to display contact topic excerpt
@@ -75,5 +77,8 @@ function labelMaker (contactObject, status) {
   if (killDiv) {
     bubble.appendChild(killDiv);
   };
+  bubble.addEventListener('click', function() {
+    console.log(event.target.id);
+  }, false);
   return bubble;
 }
