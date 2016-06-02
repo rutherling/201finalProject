@@ -1,8 +1,9 @@
 .baseBallCard {
-  border: 1px white solid;
+  border: 3px white solid;
   width: 460px;
   height: 600px;
   padding: 2rem;
+  border-radius: 5px;
 }
 
 /*border: 1px white solid;*/
