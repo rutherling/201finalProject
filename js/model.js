@@ -33,13 +33,8 @@ Contact.prototype.save = function() {
 //  day until that many days after today.
 Contact.prototype.postpone = function(days) {
   var newDate = new Date();
-  newDate.setDate(newDate.getDate() + days);
-  newDate.setHours(
-    this.next.getHours(),
-    this.next.getMinutes(),
-    this.next.getSeconds(),
-    this.next.getMilliseconds()
-  );
+  // You have to force everything to be a number or it will concatonate! Yay, JavaScript!
+  newDate.setDate( (Number(newDate.getDate()) + Number(days)) );
   this.next = newDate;
   this.save();
 };
@@ -142,6 +137,8 @@ function populateDemoContacts() {
   if (localStorage.length == 0) {
     for (var i = 0; i < demoContacts.length; i++) {
       var newContact = new Contact(demoContacts[i]);
+      newContact.last = new Date(newContact.last);
+      newContact.next = new Date(newContact.next);
       contactArray.push(newContact);
     }
   }
