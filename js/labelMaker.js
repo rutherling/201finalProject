@@ -109,7 +109,7 @@ function labelMaker (contactObject, status) {
 
   //Make containing div for contact label
   var bubble = document.createElement('div');
-  bubble.setAttribute('class', 'ctctLabels');
+  bubble.setAttribute('class', 'ctctLabels slideinleft');
   bubble.setAttribute('id', contactObject.id);
   bubble.appendChild(noPic);
   if (contactObject.photo) {
