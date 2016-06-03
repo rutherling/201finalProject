@@ -17,6 +17,7 @@ for (var i = 0; i < listAlphabetical().length; i++) {
 //bigButton appears if there's nothing in localStorage
 if (localStorage.length == 0) {
   document.getElementById('bigButton').setAttribute('style','display: flex');
+  document.getElementById('footer').setAttribute('style','margin-top: 550px');
 }
 
 document.onkeydown = function(e) {
