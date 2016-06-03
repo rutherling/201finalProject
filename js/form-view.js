@@ -59,3 +59,13 @@ function initializePostpone() {
   document.getElementById('theActualForm').appendChild(hiddenField);
 }
 initializePostpone();
+
+function initializeComplete() {
+  var hiddenField = document.createElement('input');
+  hiddenField.setAttribute('type','hidden');
+  hiddenField.setAttribute('name','completeCount');
+  hiddenField.setAttribute('id','completeCount');
+  hiddenField.setAttribute('value', 0);
+  document.getElementById('theActualForm').appendChild(hiddenField);
+}
+initializeComplete();

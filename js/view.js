@@ -3,9 +3,9 @@ test.textContent = 'DID THIS WORK?';
 function getRatio(){
   var reachRatio = [];
   var postponeCount = contactArray[passedID].postponeCount;
-  var countCompleted = contactArray[passedID].countCompleted;
+  var completeCount = contactArray[passedID].completeCount;
   reachRatio.push(postponeCount);
-  reachRatio.push(countCompleted); //Not a propoerty yet
+  reachRatio.push(completeCount); //Not a propoerty yet
   return reachRatio;
 }//call getRatio(); on the details-view.js.
 
