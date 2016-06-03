@@ -31,6 +31,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 .ctctFaces {
   height: 4rem;
   width: 4rem;
+  object-fit: cover;
   border-radius: 100%;
   margin: 10px;
   display: inline-block;

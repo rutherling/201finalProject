@@ -28,7 +28,7 @@ function labelMaker (contactObject, status) {
     picture.setAttribute('class', 'hasPic ctctFaces hasImg');
     // picture.setAttribute('id','hasImg');
     picture.setAttribute('id', contactObject.id);
-    picture.setAttribute('src', 'url ("' + contactObject.photo + '");');
+    picture.setAttribute('src', contactObject.photo);
   } else {
     //Make alt div for contact avatar
     var noPic = document.createElement('div');
@@ -111,7 +111,9 @@ function labelMaker (contactObject, status) {
   var bubble = document.createElement('div');
   bubble.setAttribute('class', 'ctctLabels');
   bubble.setAttribute('id', contactObject.id);
-  bubble.appendChild(noPic);
+  if (!contactObject.photo) {
+    bubble.appendChild(noPic);
+  };
   if (contactObject.photo) {
     bubble.appendChild(picture);
   };
