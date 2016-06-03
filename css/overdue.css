@@ -7,15 +7,41 @@
 }
 
 .fa-times-circle {
-  font-size: 300% !important;
+  font-size: 5rem !important;
   display: inline-block;
   float: right;
-  margin: 1%;
+  margin: 5px 10px 5px 0px;
 }
 
 .postponeButton {
-  width: 100%;
+  width: 48%;
+  height: 30px;
+  margin: auto 2px;
   font-size: 12px;
-  padding: 4px;
+  padding: 0px;
   /*float: right;*/
+}
+
+.doneButton {
+  width: 48%;
+  height: 30px;
+  margin: auto 2px;
+  font-size: 12px;
+  padding: 7px;
+  /*float: right;*/
+}
+
+.container {
+ width: 500px
+ border: 1px solid white;
+}
+
+#postponeAmt {
+  text-align: center;
+  height: 65%;
+  width: 25px;
+  padding: 0px;
+  margin: 5px;
+  position: relative;
+  left: 17px;
 }

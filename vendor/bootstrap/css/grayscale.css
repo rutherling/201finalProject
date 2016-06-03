@@ -9,7 +9,8 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #E1B378;
+    /*background-color: coral;*/
 }
 
 html {
@@ -44,19 +45,6 @@ p {
     }
 }
 
-a {
-    color: #42dca3;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
-}
-
-a:hover,
-a:focus {
-    text-decoration: none;
-    color: #1d9b6c;
-}
-
 .light {
     font-weight: 400;
 }
@@ -66,7 +54,7 @@ a:focus {
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #000;
+    background-color: rgb(147,203,220);
 }
 
 .navbar-custom .navbar-brand {
@@ -120,24 +108,6 @@ a:focus {
 
 .navbar-custom .nav li.active a:hover {
     color: #fff;
-}
-
-@media(min-width:768px) {
-    .navbar-custom {
-        padding: 20px 0;
-        border-bottom: 0;
-        letter-spacing: 1px;
-        background: 0 0;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-    }
-
-    .navbar-custom.top-nav-collapse {
-        padding: 0;
-        border-bottom: 1px solid rgba(255,255,255,.3);
-        background: #000;
-    }
 }
 
 .intro {
@@ -305,17 +275,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
-    background-color: transparent;
+    border: 1px solid rgba(27, 146, 101, .6);
+    color: rgba(27, 146, 101, .9);
+    background-color: rgba(255,255,255,.1);
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1.5px solid rgba(27, 146, 101, .6);
     outline: 0;
-    color: #000;
-    background-color: #42dca3;
+    color: #FFF;
+    background-color: rgba(27, 146, 101, .6);
 }
 
 ul.banner-social-buttons {

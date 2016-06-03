@@ -35,6 +35,8 @@ function redirectToEdit() {
 // The contact object has a method for updating with the default number of days.
 function completeAction() {
   var arrayId = lookup(passedId);
+  contactArray[arrayId].completeCount++;
+  contactArray[arrayId].save();
   contactArray[arrayId].reset();
   window.location.reload(true); // reloads the page, forcing a grab of new data.
 }
@@ -46,6 +48,8 @@ function postponeAction() {
   console.log(days);
   var arrayId = lookup(passedId);
   contactArray[arrayId].postpone(days);
+  contactArray[arrayId].postponeCount++;
+  contactArray[arrayId].save();
   window.location.reload(true);
 }
 
@@ -56,3 +60,36 @@ function removeAction() {
     window.location = 'contacts.html';
   }
 }
+
+//canvas chart.js
+//data returned in an array for display in pie chart
+function getRatio(){
+  var reachRatio = [];
+  var postponeCount = contactArray[passedId].postponeCount;
+  var completeCount = contactArray[passedId].completeCount;
+  reachRatio.push(postponeCount);
+  reachRatio.push(completeCount); //Not a propoerty yet
+  return reachRatio;
+}
+
+//construct the chart
+var pieChart = new Chart(ctx,
+  {
+    type: 'pie',
+    data: {
+      labels: ['Postponed', 'Reached Out'],
+      datasets: [
+        {
+          label: 'Name this',
+          data: [4,1],//reachRatio, TODO: test array and implement
+          backgroundColor: [
+            '#CC3300',//red
+            '#409769', //green
+          ], //end backgroundColor
+          hoverBackgroundColor: ['#9A9A9A','#9A9A9A']//end hover color
+        }//end datasets object
+      ]//end datasets
+    }//end data object
+  }//end constructor thing?
+  );
+getRatio();

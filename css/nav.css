@@ -10,8 +10,18 @@
   display: inline;
   border-radius: 100%;
   /*opacity: 0.75;*/
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-name: pulse;
+  animation-direction: alternate;
 }
 
-li {
-  font-size: 3rem;
+@keyframes pulse {
+  0%   { opacity: 0};
+  30%  { opacity: .75};
+  100% { opacity: 1};
 }
+
+/*li {
+  font-size: 3rem;
+}*/

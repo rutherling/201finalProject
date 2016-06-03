@@ -7,10 +7,12 @@ demoContacts = [
     'lastName': 'Custodio',
     'phone': '503-555-0123',
     'email': 'Stefania@example.com',
-    'topic': 'TEST TOPIC',
+    'topic': 'Lorem ipsum dolor sit amet',
     'reachOut': '45',
     'next': '2016-05-20T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 14,
+    'completeCount': 0
   },
   {
     'firstName': 'Kirstin',
@@ -19,25 +21,33 @@ demoContacts = [
     'email': 'Kirstin@example.com',
     'reachOut': '90',
     'next': '2016-05-21T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 17,
+    'completeCount': 0
   },
   {
     'firstName': 'Cleo',
     'lastName': '',
     'phone': '503-555-0123',
     'email': 'Cleo@example.com',
+    'topic': 'Consectetur adipisicing elit',
     'reachOut': '60',
     'next': '2016-05-21T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 19,
+    'completeCount': 0
   },
   {
     'firstName': '',
     'lastName': 'Woolverton',
     'phone': '503-555-0123',
     'email': 'Alvina@example.com',
+    'topic': 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     'reachOut': '30',
     'next': '2016-05-28T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 20,
+    'completeCount': 0
   },
   {
     'firstName': 'Debbra',
@@ -46,16 +56,21 @@ demoContacts = [
     'email': 'Debbra@example.com',
     'reachOut': '15',
     'next': '2016-06-02T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 4,
+    'completeCount': 0
   },
   {
     'firstName': 'Milly',
     'lastName': 'Carrithers',
     'phone': '503-555-0123',
     'email': 'Milly@example.com',
+    'topic': 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     'reachOut': '30',
     'next': '2016-06-04T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 17,
+    'completeCount': 0
   },
   {
     'firstName': 'Cedrick',
@@ -64,16 +79,21 @@ demoContacts = [
     'email': 'Cedrick@example.com',
     'reachOut': '45',
     'next': '2016-06-04T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 11,
+    'completeCount': 0
   },
   {
     'firstName': 'Gema',
     'lastName': 'Dunne',
     'phone': '503-555-0123',
     'email': 'Gema@example.com',
+    'topic': 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'reachOut': '60',
     'next': '2016-06-05T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 3,
+    'completeCount': 0
   },
   {
     'firstName': 'Aron',
@@ -82,7 +102,9 @@ demoContacts = [
     'email': 'Aron@example.com',
     'reachOut': '90',
     'next': '2016-06-05T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Leif',
@@ -91,7 +113,9 @@ demoContacts = [
     'email': 'Leif@example.com',
     'reachOut': '45',
     'next': '2016-06-11T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 2,
+    'completeCount': 0
   },
   {
     'firstName': 'Rolf',
@@ -100,7 +124,9 @@ demoContacts = [
     'email': 'Rolf@example.com',
     'reachOut': '14',
     'next': '2016-06-11T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Jutta',
@@ -109,7 +135,9 @@ demoContacts = [
     'email': 'Jutta@example.com',
     'reachOut': '30',
     'next': '2016-06-17T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 9,
+    'completeCount': 0
   },
   {
     'firstName': 'Kathrin',
@@ -118,7 +146,9 @@ demoContacts = [
     'email': 'Kathrin@example.com',
     'reachOut': '180',
     'next': '2016-06-21T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 18,
+    'completeCount': 0
   },
   {
     'firstName': 'Otelia',
@@ -127,7 +157,9 @@ demoContacts = [
     'email': 'Otelia@example.com',
     'reachOut': '90',
     'next': '2016-06-21T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Alethea',
@@ -136,7 +168,9 @@ demoContacts = [
     'email': 'Alethea@example.com',
     'reachOut': '60',
     'next': '2016-07-03T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Cedric',
@@ -145,7 +179,9 @@ demoContacts = [
     'email': 'Cedric@example.com',
     'reachOut': '45',
     'next': '2016-07-03T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Booker',
@@ -154,7 +190,9 @@ demoContacts = [
     'email': 'Booker@example.com',
     'reachOut': '30',
     'next': '2016-07-03T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Nikia',
@@ -163,7 +201,9 @@ demoContacts = [
     'email': 'Nikia@example.com',
     'reachOut': '14',
     'next': '2016-07-03T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Ethel',
@@ -172,7 +212,9 @@ demoContacts = [
     'email': 'Ethel@example.com',
     'reachOut': '45',
     'next': '2016-07-15T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Pinkie',
@@ -181,6 +223,8 @@ demoContacts = [
     'email': 'Pinkie@example.com',
     'reachOut': '90',
     'next': '2016-08-15T19:00:00.000Z',
-    'last': '2016-04-05T19:00:00.000Z'
+    'last': '2016-04-05T19:00:00.000Z',
+    'postponeCount': 0,
+    'completeCount': 0
   }
 ];

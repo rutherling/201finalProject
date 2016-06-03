@@ -1,14 +1,16 @@
 .baseBallCard {
-  border: 1px white solid;
+  border: 3px white solid;
   width: 460px;
-  height: 600px;
+  /*height: 600px;*/
   padding: 2rem;
+  border-radius: 5px;
+  margin: 100px auto;
 }
 
+/*border: 1px white solid;*/
 .name {
-  border: 1px white solid;
   width: 95%;
-  height: 2rem;
+  /*height: 2rem;*/
   margin: 10px;
   padding: 3px;
   text-transform: uppercase;
@@ -18,9 +20,9 @@
 }
 
 .topic {
-  border: 1px white solid;
+  /*border: 1px white solid;*/
   width: 95%;
-  height: 2rem;
+  /*height: 2rem;*/
   margin: 10px;
   padding: 3px;
   overflow: hidden;
@@ -28,38 +30,46 @@
 }
 
 p {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 500;
-  letter-spacing: .6px;
+  text-transform: uppercase;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nextContact {
-  border: 1px white solid;
   text-align: center;
-  margin: 4.2rem auto;
+  font-size: 6.2rem;
 }
-
+#canvas{
+  height: 12rem;
+  width: 12rem;
+  /*margin: 20px;*/
+}
 .circle {
   border: 2px white solid;
   border-radius: 100%;
   height: 10rem;
   width: 10rem;
   margin: 20px;
+  background-color:  rgb(204, 51, 0);
 }
 
 .righthalf {
   width: 50%;
   /*float: right;*/
-  border: 1px white solid;
+  /*border: 1px white solid;*/
   /*margin-left: 50%;*/
   height: 100%;
   display: flex;
+  padding: .25rem;
+  border-radius: 5px;
   flex-direction: column;
+  background-color: rgba(255, 255, 255, .17);;
 }
 
 .lefthalf {
   float: left;
-  border: 1px white solid;
+  /*border: 1px white solid;*/
   width: 48%;
   height: 100%;
 }
@@ -80,7 +90,6 @@ p {
 
 .editButton {
   width: 45%;
-  display: inline-block;
   flex-grow: 1;
   /*float: left;*/
   /*height: 100%;*/
@@ -90,14 +99,23 @@ p {
   width: 45%;
   flex-grow: 1;
   float: right;
-  /*height: 100%;*/
-  display: inline-block;
 }
 
-.email, .phone{
-  display: block;
+#completeBtn {
+  /*height: 64px;
+  font-size: 3.1rem;
+  font-weight: bolder;*/
+}
+
+.email {
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 #postponeAmt {
   text-align: center;
+}
+
+.doneButton, .postponeButton {
+  display: block;
 }
