@@ -3,17 +3,20 @@ function labelMaker (contactObject, status) {
   if ((status != 'overdueTray') && (status != 'overdueList')) {
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'ctctPlans');
+    noteDiv.setAttribute('id', contactObject.id);
     noteDiv.textContent = contactObject.topic;
   }
 
   //Make div element to display contact name
   var nameDiv = document.createElement('div');
   nameDiv.setAttribute('class', 'ctctName');
+  nameDiv.setAttribute('id', contactObject.id);
   nameDiv.textContent = contactObject.firstName + ' ' + contactObject.lastName;
 
   //Make container div for contact name and topic excerpt
   var innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'mini-text');
+  innerDiv.setAttribute('id', contactObject.id);
   innerDiv.appendChild(nameDiv);
   if (noteDiv) {
     innerDiv.appendChild(noteDiv);
@@ -22,13 +25,15 @@ function labelMaker (contactObject, status) {
   //Make img placeholder for contact avatar
   if (contactObject.photo) {
     var picture = document.createElement('img');
-    picture.setAttribute('class', 'hasPic ctctFaces');
-    picture.setAttribute('id','hasImg');
+    picture.setAttribute('class', 'hasPic ctctFaces hasImg');
+    // picture.setAttribute('id','hasImg');
+    picture.setAttribute('id', contactObject.id);
     picture.setAttribute('src', 'url ("../assets/Senior_Portrait_0067-478x700.jpg");');
   } else {
     //Make alt div for contact avatar
     var noPic = document.createElement('div');
     noPic.setAttribute('class', 'altDiv ctctFaces');
+    noPic.setAttribute('id', contactObject.id);
     var initString = function () {
       var string = '';
       if (contactObject.firstName) {
@@ -111,5 +116,7 @@ function labelMaker (contactObject, status) {
 }
 
 function navigateToDetailView(event) {
+  console.log('event.target.id: ' + event.target.id);
+  console.log(event.target.id);
   window.location = 'details.html?id=' + event.target.id;
 }

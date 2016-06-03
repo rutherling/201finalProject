@@ -46,3 +46,13 @@ function populateFormValues(passedId) {
     }
   }
 }
+
+function initializePostpone() {
+  var hiddenField = document.createElement('input');
+  hiddenField.setAttribute('type','hidden');
+  hiddenField.setAttribute('name','postponeCount');
+  hiddenField.setAttribute('id','postponeCount');
+  hiddenField.setAttribute('value', 0);
+  document.getElementById('theActualForm').appendChild(hiddenField);
+}
+initializePostpone();

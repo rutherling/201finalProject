@@ -46,6 +46,8 @@ function postponeAction() {
   console.log(days);
   var arrayId = lookup(passedId);
   contactArray[arrayId].postpone(days);
+  contactArray[arrayId].postponeCount++;
+  contactArray[arrayId].save();
   window.location.reload(true);
 }
 
