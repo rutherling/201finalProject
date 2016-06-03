@@ -144,18 +144,13 @@ function addContact(submitObject) {
   }
 }
 
-// If there's nothing in storage, this will generate demo contacts.
-populateDemoContacts();
-
-function populateDemoContacts() {
-  if (localStorage.length == 0) {
-    for (var i = 0; i < demoContacts.length; i++) {
-      var newContact = new Contact(demoContacts[i]);
-      // This next part fixes the dates from strings to date objects.
-      newContact.last = new Date(newContact.last);
-      newContact.next = new Date(newContact.next);
-      newContact.save();
-    }
+function addDemoContacts() {
+  for (var i = 0; i < demoContacts.length; i++) {
+    var newContact = new Contact(demoContacts[i]);
+    // This next part fixes the dates from strings to date objects.
+    newContact.last = new Date(newContact.last);
+    newContact.next = new Date(newContact.next);
+    newContact.save();
   }
 }
 
