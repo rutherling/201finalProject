@@ -1,16 +1,13 @@
 .baseBallCard {
   border: 3px white solid;
   width: 460px;
-  /*height: 600px;*/
   padding: 2rem;
   border-radius: 5px;
   margin: 100px auto;
 }
 
-/*border: 1px white solid;*/
 .name {
   width: 95%;
-  /*height: 2rem;*/
   margin: 10px;
   padding: 3px;
   text-transform: uppercase;
@@ -20,9 +17,7 @@
 }
 
 .topic {
-  /*border: 1px white solid;*/
   width: 95%;
-  /*height: 2rem;*/
   margin: 10px;
   padding: 3px;
   overflow: hidden;
@@ -65,9 +60,6 @@ p {
 
 .righthalf {
   width: 50%;
-  /*float: right;*/
-  /*border: 1px white solid;*/
-  /*margin-left: 50%;*/
   height: 100%;
   display: flex;
   padding: 1rem;
@@ -78,7 +70,6 @@ p {
 
 .lefthalf {
   float: left;
-  /*border: 1px white solid;*/
   width: 48%;
   height: 100%;
 }
@@ -101,8 +92,6 @@ p {
   width: 45%;
   flex-grow: 1;
   margin-right: 4px;
-  /*float: left;*/
-  /*height: 100%;*/
 }
 
 .removeButton {
@@ -110,12 +99,6 @@ p {
   flex-grow: 1;
   float: right;
   margin-left: 4px;
-}
-
-#completeBtn {
-  /*height: 64px;
-  font-size: 3.1rem;
-  font-weight: bolder;*/
 }
 
 .email {

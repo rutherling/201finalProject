@@ -46,17 +46,13 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 
 .mini-text {
   display: inline-block;
-  /*height: 3rem;*/
   width: 65%;
-  /*border-radius: 0 25px 25px 0;*/
-  /*font-size: 0.75em;*/
   padding: 0.125rem;
   vertical-align: top;
   margin: 0 5% 0 0;
 }
 
 div {
-  /*margin: 0;*/
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -68,7 +64,6 @@ div {
   font-weight: 700;
   letter-spacing: 1px
   margin: 0.25rem 0 0 0;
-  /*opacity: 0;*/
 }
 
 .ctctPlans {
@@ -79,8 +74,6 @@ div {
 
 #overdueCtcts {
   margin: 100px auto 0 auto;
-  /*display: flex;
-  justify-content: flex-start;*/
 }
 
 #overdueCtcts > div {
@@ -89,9 +82,7 @@ div {
 
 #overdueCtcts > .ctctLabels {
   display: inline-block;
-  /*background-color: rgba(162,62,38,1);*/
   background-color: rgb(190, 220, 233);
-  /*opacity: .4;*/
   min-width: 0px;
 }
 ::selection{
