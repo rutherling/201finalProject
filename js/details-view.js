@@ -2,6 +2,9 @@ document.getElementById('completeBtn').addEventListener('click', completeAction)
 document.getElementById('postponeBtn').addEventListener('click', postponeAction);
 document.getElementById('editBtn').addEventListener('click', redirectToEdit);
 document.getElementById('removeBtn').addEventListener('click', removeAction);
+document.getElementById('postponeAmt').addEventListener('click', function() {
+  event.stopPropagation();
+});
 
 function testing(event) {
   console.log(event);
@@ -16,11 +19,16 @@ function populateDetails() {
   for (key in currentContact) {
     var domElement = document.getElementById(key);
     if (currentContact[key] && domElement) {
-      if (typeof(currentContact[key]) == 'object') {
-        // Dates just show up as "objects"
-        domElement.innerText = currentContact[key].toDateString();
+      console.log(key);
+      if (key == 'last' && Date.parse(currentContact[key]) == '0') { //Currently has odd behavior. Some new contacts have undefined last. Others have 1969.
+        domElement.innerText = 'No Last Contact.';
       } else {
-        domElement.innerText = currentContact[key];
+        if (typeof(currentContact[key]) == 'object') {
+        // Dates just show up as "objects"
+          domElement.innerText = currentContact[key].toDateString();
+        } else {
+          domElement.innerText = currentContact[key];
+        }
       }
     }
   }
