@@ -40,7 +40,11 @@ p {
   text-align: center;
   font-size: 6.2rem;
 }
-
+#canvas{
+  height: 12rem;
+  width: 12rem;
+  /*margin: 20px;*/
+}
 .circle {
   border: 2px white solid;
   border-radius: 100%;
