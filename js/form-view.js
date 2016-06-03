@@ -15,11 +15,16 @@ function addContactFromForm(event) {
   // Validate that new objects confirming they have at least a firstname or lastname
   //  AND a phone or email.
   if ( (submitObject.firstName != '' || submitObject.lastName != '') &&
-       (submitObject.phone != '' || submitObject.email != '') ) {
+       (submitObject.phone != '' || submitObject.email != '') &&
+       (parseInt(submitObject.reachOut) > 0)) {
     var newId = addContact(submitObject);
     window.location = 'details.html?id=' + newId;
+  } else if ((submitObject.firstName == '' && submitObject.lastName == '')){
+    alert('Please enter a first and/or last name.');
   } else if (submitObject.phone == '' && submitObject.email == '') {
     alert ('Please add either a telephone number or an e-mail address.');
+  } else if(typeof(submitObject.reachOut) == 'string'){
+    alert('Just enter reachout days, example: 7');
   }
 }
 
