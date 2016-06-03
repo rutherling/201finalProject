@@ -63,7 +63,7 @@ p {
   /*margin-left: 50%;*/
   height: 100%;
   display: flex;
-  padding: .25rem;
+  padding: 1rem;
   border-radius: 5px;
   flex-direction: column;
   background-color: rgba(255, 255, 255, .17);;
@@ -93,6 +93,7 @@ p {
 .editButton {
   width: 45%;
   flex-grow: 1;
+  margin-right: 4px;
   /*float: left;*/
   /*height: 100%;*/
 }
@@ -101,6 +102,7 @@ p {
   width: 45%;
   flex-grow: 1;
   float: right;
+  margin-left: 4px;
 }
 
 #completeBtn {
@@ -116,6 +118,8 @@ p {
 
 #postponeAmt {
   text-align: center;
+  height: 2rem;
+  width: 5rem;
 }
 
 .doneButton, .postponeButton {
