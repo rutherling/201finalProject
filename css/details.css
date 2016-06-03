@@ -44,7 +44,8 @@ p {
   height: 10rem;
   width: 10rem;
   margin: 20px;
-  /*position: absolute;*/
+  z-index: -100;
+  position: relative;
 }
 .circle {
   border: 2px white solid;
@@ -53,7 +54,8 @@ p {
   width: 10rem;
   /*margin: 20px;*/
   background-color:  rgb(204, 51, 0);
-  position: relative;
+  position: absolute;
+  z-index: 100;
 }
 
 .righthalf {
