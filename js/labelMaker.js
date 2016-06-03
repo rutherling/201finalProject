@@ -71,12 +71,9 @@ function labelMaker (contactObject, status) {
     }, false);
     postDiv.addEventListener('click', function() {
       event.stopPropagation();
-      console.log('postponeContact called');
       var days = document.getElementById('postponeAmt').value;
-      console.log(days);
       var arrayId = lookup(event.target.parentElement.id);
-      console.log(arrayId);
-      console.log(contactArray[arrayId]);
+      contactArray[arrayId].postponeCount++;
       contactArray[arrayId].postpone(days);
       window.location.reload(true);
     }, false);
@@ -87,7 +84,6 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(doneDiv);
     doneDiv.addEventListener('click', function() {
       event.stopPropagation();
-      console.log('completeAction called');
       var arrayId = lookup(event.target.parentElement.id);
       contactArray[arrayId].reset();
       window.location.reload(true); // reloads the page, forcing a grab of new data.
@@ -98,7 +94,6 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(killDiv);
     killDiv.addEventListener('click', function() {
       event.stopPropagation();
-      console.log('removeContact called');
       var currentContact = contactArray[lookup(event.target.parentElement.id)];
       if (confirm('Are you sure you want to remove ' + currentContact.firstName + ' ' + currentContact.lastName + ' from the your contacts?')) {
         currentContact.removeContact();
@@ -124,7 +119,5 @@ function labelMaker (contactObject, status) {
 }
 
 function navigateToDetailView(event) {
-  console.log('event.target.id: ' + event.target.id);
-  console.log(event.target.id);
   window.location = 'details.html?id=' + event.target.id;
 }

@@ -51,6 +51,8 @@ Contact.prototype.postpone = function(days) {
 //  such as number of times postponed vs reset, and we re-examine this method at
 //  that time.
 Contact.prototype.reset = function() {
+  this.completeCount++;
+  this.save();
   this.last = new Date();
   this.postpone(this.reachOut);
 };
