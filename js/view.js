@@ -17,7 +17,7 @@ var pieChart = new Chart(canvas,
       datasets: [
         {
           label: 'Name this',
-          data: [4,1],//reachRatio, TODO: test array and implement
+          data: [0,1],//reachRatio, TODO: test array and implement
           backgroundColor: [
             '#CC3300',//red
             '#409769', //green
