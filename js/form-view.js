@@ -18,7 +18,6 @@ function addContactFromForm(event) {
        (submitObject.phone != '' || submitObject.email != '') ) {
     addContact(submitObject);
   }
-  initializePostpone();
 }
 
 // Demo of how we will get the properties in the URL
@@ -51,8 +50,9 @@ function populateFormValues(passedId) {
 function initializePostpone() {
   var hiddenField = document.createElement('input');
   hiddenField.setAttribute('type','hidden');
-  hiddenField.setAttribute('name','postpone');
-  hiddenField.setAttribute('id','postpone');
-  hiddenField.setAttribute('value',0);
+  hiddenField.setAttribute('name','postponeCount');
+  hiddenField.setAttribute('id','postponeCount');
+  hiddenField.setAttribute('value', 0);
   document.getElementById('theActualForm').appendChild(hiddenField);
 }
+initializePostpone();
