@@ -28,7 +28,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+#topic{
+  text-overflow: clip;
+  word-wrap: normal;
+  white-space: normal;
+}
 p {
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
