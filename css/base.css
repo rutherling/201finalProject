@@ -41,6 +41,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   line-height: 4rem;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
+  object-fit: cover;
 }
 
 .mini-text {
