@@ -123,6 +123,7 @@ p {
   text-align: center;
   height: 2rem;
   width: 5rem;
+  padding: 0.3rem
 }
 
 .doneButton, .postponeButton {
