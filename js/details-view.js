@@ -89,7 +89,10 @@ var pieChart = new Chart(ctx,
           hoverBackgroundColor: ['#9A9A9A','#9A9A9A']//end hover color
         }//end datasets object
       ]//end datasets
-    }//end data object
+    },//end data object
+    options: {
+      legend: {position: 'bottom'}
+    }
   }//end constructor thing?
   );
 getRatio();
