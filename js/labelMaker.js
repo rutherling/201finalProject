@@ -3,17 +3,20 @@ function labelMaker (contactObject, status) {
   if ((status != 'overdueTray') && (status != 'overdueList')) {
     var noteDiv = document.createElement('div');
     noteDiv.setAttribute('class', 'ctctPlans');
+    noteDiv.setAttribute('id', contactObject.id);
     noteDiv.textContent = contactObject.topic;
   }
 
   //Make div element to display contact name
   var nameDiv = document.createElement('div');
   nameDiv.setAttribute('class', 'ctctName');
+  nameDiv.setAttribute('id', contactObject.id);
   nameDiv.textContent = contactObject.firstName + ' ' + contactObject.lastName;
 
   //Make container div for contact name and topic excerpt
   var innerDiv = document.createElement('div');
   innerDiv.setAttribute('class', 'mini-text');
+  innerDiv.setAttribute('id', contactObject.id);
   innerDiv.appendChild(nameDiv);
   if (noteDiv) {
     innerDiv.appendChild(noteDiv);
@@ -22,13 +25,15 @@ function labelMaker (contactObject, status) {
   //Make img placeholder for contact avatar
   if (contactObject.photo) {
     var picture = document.createElement('img');
-    picture.setAttribute('class', 'hasPic ctctFaces');
-    picture.setAttribute('id','hasImg');
+    picture.setAttribute('class', 'hasPic ctctFaces hasImg');
+    // picture.setAttribute('id','hasImg');
+    picture.setAttribute('id', contactObject.id);
     picture.setAttribute('src', 'url ("../assets/Senior_Portrait_0067-478x700.jpg");');
   } else {
     //Make alt div for contact avatar
     var noPic = document.createElement('div');
     noPic.setAttribute('class', 'altDiv ctctFaces');
+    noPic.setAttribute('id', contactObject.id);
     var initString = function () {
       var string = '';
       if (contactObject.firstName) {
@@ -51,10 +56,23 @@ function labelMaker (contactObject, status) {
     var postDiv = document.createElement('div');
     postDiv.setAttribute('class', 'postponeButton btn btn-default btn-lg');
     postDiv.textContent = 'Postpone';
+    var postponeAmt = document.createElement('input');
+    postponeAmt.setAttribute('class', 'btn btn-default btn-lg');
+    postponeAmt.setAttribute('type', 'text');
+    postponeAmt.setAttribute('maxlength', '3');
+    postponeAmt.setAttribute('size', '4');
+    postponeAmt.setAttribute('required', 'required');
+    postponeAmt.setAttribute('value', '7');
+    postponeAmt.setAttribute('id', 'postponeAmt'); //does this cause problems, does it need to concat with contactID in order to be truly unique?
+    postDiv.appendChild(postponeAmt);
     innerDiv.appendChild(postDiv);
     postDiv.addEventListener('click', function() {
       console.log('postponeContact called');
-      // TODO: postponeAction();
+      var days = document.getElementById('postponeAmt').value;
+      console.log(days);
+      var arrayId = lookup(passedId);
+      contactArray[arrayId].postpone(days);
+      window.location.reload(true);
     }, false);
   //Make done button
     var doneDiv = document.createElement('div');
@@ -63,7 +81,9 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(doneDiv);
     postDiv.addEventListener('click', function() {
       console.log('completeAction called');
-      // TODO: completeAction();
+      var arrayId = lookup(passedId);
+      contactArray[arrayId].reset();
+      window.location.reload(true); // reloads the page, forcing a grab of new data.
     }, false);
   //Make remove button if status is overdueList
     var killDiv = document.createElement('i');
@@ -71,7 +91,11 @@ function labelMaker (contactObject, status) {
     innerDiv.appendChild(killDiv);
     killDiv.addEventListener('click', function() {
       console.log('removeContact called');
-      // TODO: removeContact();
+      var currentContact = contactArray[lookup(passedId)];
+      if (confirm('Are you sure you want to remove ' + currentContact.firstName + ' ' + currentContact.lastName + ' from the your contacts?')) {
+        currentContact.removeContact();
+        window.location = 'contacts.html';
+      }
     }, false);
   }
 
@@ -92,5 +116,7 @@ function labelMaker (contactObject, status) {
 }
 
 function navigateToDetailView(event) {
+  console.log('event.target.id: ' + event.target.id);
+  console.log(event.target.id);
   window.location = 'details.html?id=' + event.target.id;
 }
