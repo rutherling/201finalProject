@@ -28,7 +28,7 @@ function labelMaker (contactObject, status) {
     picture.setAttribute('class', 'hasPic ctctFaces hasImg');
     // picture.setAttribute('id','hasImg');
     picture.setAttribute('id', contactObject.id);
-    picture.setAttribute('src', 'url ("../assets/Senior_Portrait_0067-478x700.jpg");');
+    picture.setAttribute('src', 'url ("' + contactObject.photo + '");');
   } else {
     //Make alt div for contact avatar
     var noPic = document.createElement('div');
