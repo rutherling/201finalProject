@@ -21,13 +21,16 @@ function populateDetails() {
     if (currentContact[key] && domElement) {
       console.log(key);
       if (key == 'last' && Date.parse(currentContact[key]) == '0') { //Currently has odd behavior. Some new contacts have undefined last. Others have 1969.
-        domElement.innerText = 'No Last Contact.';
+        domElement.innerText = 'N/A';
       } else {
         if (typeof(currentContact[key]) == 'object') {
         // Dates just show up as "objects"
           domElement.innerText = currentContact[key].toDateString();
         } else {
           domElement.innerText = currentContact[key];
+        }
+        if (domElement.textContent == 'Invalid Date') {
+          domElement.innerText = 'N/A';
         }
       }
     }
