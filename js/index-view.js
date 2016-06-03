@@ -1,3 +1,7 @@
+document.getElementById('bigButton').addEventListener('click', function() {
+  document.getElementById('bigButton').setAttribute('display','none');
+});
+
 //Any functions that affect what the users see are here
 
 //Previous step: contactArray.push(submitObject)
@@ -48,4 +52,9 @@ function populateOverdues(positionNum) {
     chevronDiv.setAttribute('id', 'doubleRightDiv');
     document.getElementById('overdueCtcts').appendChild(chevronDiv);
   }
+}
+
+//bigButton appears if there's nothing in localStorage
+if (localStorage.length == 0) {
+  document.getElementById('bigButton').setAttribute('style','display: flex');
 }
