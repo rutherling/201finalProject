@@ -102,7 +102,7 @@ function labelMaker (contactObject, status) {
       var currentContact = contactArray[lookup(event.target.parentElement.id)];
       if (confirm('Are you sure you want to remove ' + currentContact.firstName + ' ' + currentContact.lastName + ' from the your contacts?')) {
         currentContact.removeContact();
-        window.location = 'contacts.html';
+        window.location.reload(true);
       }
     }, false);
   }
