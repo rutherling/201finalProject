@@ -1,7 +1,4 @@
 var today = new Date();
-// var sortedOverdueArray = [];
-// var sortedNextArray = [];
-// var sortedAlphabeticalArray = [];
 
 function listOverdues () {
   // Create an array of overdue contacts
