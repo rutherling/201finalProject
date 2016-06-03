@@ -66,11 +66,17 @@ function labelMaker (contactObject, status) {
     postponeAmt.setAttribute('id', 'postponeAmt'); //does this cause problems, does it need to concat with contactID in order to be truly unique?
     postDiv.appendChild(postponeAmt);
     innerDiv.appendChild(postDiv);
+    postponeAmt.addEventListener('click', function() {
+      event.stopPropagation();
+    }, false);
     postDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('postponeContact called');
       var days = document.getElementById('postponeAmt').value;
       console.log(days);
-      var arrayId = lookup(passedId);
+      var arrayId = lookup(event.target.parentElement.id);
+      console.log(arrayId);
+      console.log(contactArray[arrayId]);
       contactArray[arrayId].postpone(days);
       window.location.reload(true);
     }, false);
@@ -79,9 +85,10 @@ function labelMaker (contactObject, status) {
     doneDiv.setAttribute('class', 'doneButton btn btn-default btn-lg');
     doneDiv.textContent = 'Complete';
     innerDiv.appendChild(doneDiv);
-    postDiv.addEventListener('click', function() {
+    doneDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('completeAction called');
-      var arrayId = lookup(passedId);
+      var arrayId = lookup(event.target.parentElement.id);
       contactArray[arrayId].reset();
       window.location.reload(true); // reloads the page, forcing a grab of new data.
     }, false);
@@ -90,8 +97,9 @@ function labelMaker (contactObject, status) {
     killDiv.setAttribute('class', 'fa fa-times-circle');
     innerDiv.appendChild(killDiv);
     killDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('removeContact called');
-      var currentContact = contactArray[lookup(passedId)];
+      var currentContact = contactArray[lookup(event.target.parentElement.id)];
       if (confirm('Are you sure you want to remove ' + currentContact.firstName + ' ' + currentContact.lastName + ' from the your contacts?')) {
         currentContact.removeContact();
         window.location = 'contacts.html';

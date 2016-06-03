@@ -15,6 +15,9 @@ function Contact(newInfo) {
   if (!this.id) {
     this.id = getUniqueId();
   }
+  if (!this.next) {
+    this.postpone(this.reachOut);
+  }
   this.save();
 }
 
