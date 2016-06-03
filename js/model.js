@@ -107,11 +107,13 @@ loadDataFromStorage();
 
 function loadDataFromStorage() {
   for (object in localStorage) {
-    var newContact = new Contact(JSON.parse(localStorage[object]));
-    // This next part fixes the dates from strings to date objects.
-    newContact.last = new Date(newContact.last);
-    newContact.next = new Date(newContact.next);
-    newContact.save();
+    if (object != 'key' && object != 'getItem' && object != 'setItem' && object != 'removeItem' && object != 'clear' && object != 'length') {
+      var newContact = new Contact(JSON.parse(localStorage[object]));
+      // This next part fixes the dates from strings to date objects.
+      newContact.last = new Date(newContact.last);
+      newContact.next = new Date(newContact.next);
+      newContact.save();
+    }
   }
 }
 
