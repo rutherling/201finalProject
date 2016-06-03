@@ -4,12 +4,8 @@
 #logo {
   height: 3.25rem;
   width: 3.25rem;
-  /*padding: 0 0 0.0625rem 0;*/
-  /*position: relative;*/
-  /*background-color: white;*/
   display: inline;
   border-radius: 100%;
-  /*opacity: 0.75;*/
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-name: pulse;
@@ -21,7 +17,3 @@
   30%  { opacity: .75};
   100% { opacity: 1};
 }
-
-/*li {
-  font-size: 3rem;
-}*/

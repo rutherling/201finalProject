@@ -12,23 +12,17 @@ function isSameDateAs(pDate, qDate) {
 };
 
 //Initial Timeline Code follows
-// for (var i = 0; i < listNextDates().length; i++) {
-//   var singleBubble = labelMaker(listNextDates()[i], '');
-//   document.getElementById('timeline').appendChild(singleBubble);
-// }
 for (var i = 0; i < listNextDates().length; i++) {
   var idxDate = new Date(listNextDates()[i].next);
   if (isSameDateAs(idxDate,workingDate)) {
     //  Append bubble
     var singleBubble = labelMaker(listNextDates()[i], '');
     document.getElementById('timeline').appendChild(singleBubble);
-    // console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + 'bubble.');
   } else {
     // Update workingDate
     workingDate = new Date(listNextDates()[i].next);
-    // console.log('workingDate is now ' + workingDate);
+
     // Append new date div
-    // console.log('Appending new dateDiv:' + workingDate);
     var dateDiv = document.createElement('div');
     dateDiv.setAttribute('class', 'dateDiv');
     dateDiv.textContent = workingDate.toDateString();
@@ -36,6 +30,5 @@ for (var i = 0; i < listNextDates().length; i++) {
     // Append bubble
     var singleBubble = labelMaker(listNextDates()[i], '');
     document.getElementById('timeline').appendChild(singleBubble);
-    // console.log('Append ' + listNextDates()[i].firstName + ' ' + listNextDates()[i].lastName + '\'s bubble.');
   }
 }
