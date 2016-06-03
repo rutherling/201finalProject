@@ -35,6 +35,8 @@ function redirectToEdit() {
 // The contact object has a method for updating with the default number of days.
 function completeAction() {
   var arrayId = lookup(passedId);
+  contactArray[arrayId].completeCount++;
+  contactArray[arrayId].save();
   contactArray[arrayId].reset();
   window.location.reload(true); // reloads the page, forcing a grab of new data.
 }

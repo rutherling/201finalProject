@@ -11,7 +11,8 @@ demoContacts = [
     'reachOut': '45',
     'next': '2016-05-20T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 14
+    'postponeCount': 14,
+    'completeCount': 0
   },
   {
     'firstName': 'Kirstin',
@@ -21,7 +22,8 @@ demoContacts = [
     'reachOut': '90',
     'next': '2016-05-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 17
+    'postponeCount': 17,
+    'completeCount': 0
   },
   {
     'firstName': 'Cleo',
@@ -32,7 +34,8 @@ demoContacts = [
     'reachOut': '60',
     'next': '2016-05-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 19
+    'postponeCount': 19,
+    'completeCount': 0
   },
   {
     'firstName': '',
@@ -43,7 +46,8 @@ demoContacts = [
     'reachOut': '30',
     'next': '2016-05-28T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 20
+    'postponeCount': 20,
+    'completeCount': 0
   },
   {
     'firstName': 'Debbra',
@@ -53,7 +57,8 @@ demoContacts = [
     'reachOut': '15',
     'next': '2016-06-02T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 4
+    'postponeCount': 4,
+    'completeCount': 0
   },
   {
     'firstName': 'Milly',
@@ -64,7 +69,8 @@ demoContacts = [
     'reachOut': '30',
     'next': '2016-06-04T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 17
+    'postponeCount': 17,
+    'completeCount': 0
   },
   {
     'firstName': 'Cedrick',
@@ -74,7 +80,8 @@ demoContacts = [
     'reachOut': '45',
     'next': '2016-06-04T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 11
+    'postponeCount': 11,
+    'completeCount': 0
   },
   {
     'firstName': 'Gema',
@@ -85,7 +92,8 @@ demoContacts = [
     'reachOut': '60',
     'next': '2016-06-05T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 3
+    'postponeCount': 3,
+    'completeCount': 0
   },
   {
     'firstName': 'Aron',
@@ -95,7 +103,8 @@ demoContacts = [
     'reachOut': '90',
     'next': '2016-06-05T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Leif',
@@ -105,7 +114,8 @@ demoContacts = [
     'reachOut': '45',
     'next': '2016-06-11T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 2
+    'postponeCount': 2,
+    'completeCount': 0
   },
   {
     'firstName': 'Rolf',
@@ -115,7 +125,8 @@ demoContacts = [
     'reachOut': '14',
     'next': '2016-06-11T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Jutta',
@@ -125,7 +136,8 @@ demoContacts = [
     'reachOut': '30',
     'next': '2016-06-17T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 9
+    'postponeCount': 9,
+    'completeCount': 0
   },
   {
     'firstName': 'Kathrin',
@@ -135,7 +147,8 @@ demoContacts = [
     'reachOut': '180',
     'next': '2016-06-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 18
+    'postponeCount': 18,
+    'completeCount': 0
   },
   {
     'firstName': 'Otelia',
@@ -145,7 +158,8 @@ demoContacts = [
     'reachOut': '90',
     'next': '2016-06-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Alethea',
@@ -155,7 +169,8 @@ demoContacts = [
     'reachOut': '60',
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Cedric',
@@ -165,7 +180,8 @@ demoContacts = [
     'reachOut': '45',
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Booker',
@@ -175,7 +191,8 @@ demoContacts = [
     'reachOut': '30',
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Nikia',
@@ -185,7 +202,8 @@ demoContacts = [
     'reachOut': '14',
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Ethel',
@@ -195,7 +213,8 @@ demoContacts = [
     'reachOut': '45',
     'next': '2016-07-15T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   },
   {
     'firstName': 'Pinkie',
@@ -205,6 +224,7 @@ demoContacts = [
     'reachOut': '90',
     'next': '2016-08-15T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
-    'postponeCount': 0
+    'postponeCount': 0,
+    'completeCount': 0
   }
 ];

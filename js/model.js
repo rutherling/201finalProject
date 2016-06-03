@@ -122,6 +122,7 @@ function addContact(submitObject) {
     // construct and push object to array
     var newContact = new Contact(submitObject);
     // contactArray.push(newContact);
+    return newContact.id;
   } else {
     var arrayPosition = lookup(submitObject.id);
     var savedContact = contactArray[arrayPosition];
@@ -135,6 +136,7 @@ function addContact(submitObject) {
       }
     }
     contactArray[arrayPosition] = new Contact(savedContact);
+    return submitObject.id;
   }
 }
 
