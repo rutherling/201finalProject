@@ -158,3 +158,18 @@ footer {
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bolder;
 }
+
+#bigButton {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: none;
+  padding-top: 160px;
+  justify-content: center;
+  z-index: 1000;
+
+}
+
+#bigPlus {
+  font-size: 40rem !important;
+}

@@ -1,3 +1,7 @@
+document.getElementById('bigButton').addEventListener('click', function() {
+  document.getElementById('bigButton').setAttribute('display','none');
+});
+
 //Any functions that affect what the users see are here
 
 //Previous step: contactArray.push(submitObject)
@@ -21,4 +25,9 @@ for (var i = 0; i < listOverdues().length; i++) {
   var singleBubble = labelMaker(listOverdues()[i], 'overdueTray');
   singleBubble.style.opacity = 1 - (i / 4);
   document.getElementById('overdueCtcts').appendChild(singleBubble);
+}
+
+//bigButton appears if there's nothing in localStorage
+if (localStorage.length == 0) {
+  document.getElementById('bigButton').setAttribute('style','display: flex');
 }
