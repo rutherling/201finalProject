@@ -67,6 +67,7 @@ function labelMaker (contactObject, status) {
     postDiv.appendChild(postponeAmt);
     innerDiv.appendChild(postDiv);
     postDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('postponeContact called');
       var days = document.getElementById('postponeAmt').value;
       console.log(days);
@@ -80,6 +81,7 @@ function labelMaker (contactObject, status) {
     doneDiv.textContent = 'Complete';
     innerDiv.appendChild(doneDiv);
     postDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('completeAction called');
       var arrayId = lookup(passedId);
       contactArray[arrayId].reset();
@@ -90,6 +92,7 @@ function labelMaker (contactObject, status) {
     killDiv.setAttribute('class', 'fa fa-times-circle');
     innerDiv.appendChild(killDiv);
     killDiv.addEventListener('click', function() {
+      event.stopPropagation();
       console.log('removeContact called');
       var currentContact = contactArray[lookup(passedId)];
       if (confirm('Are you sure you want to remove ' + currentContact.firstName + ' ' + currentContact.lastName + ' from the your contacts?')) {
