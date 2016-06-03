@@ -51,6 +51,8 @@ Contact.prototype.postpone = function(days) {
 //  such as number of times postponed vs reset, and we re-examine this method at
 //  that time.
 Contact.prototype.reset = function() {
+  this.completeCount++;
+  this.save();
   this.last = new Date();
   this.postpone(this.reachOut);
 };
@@ -107,11 +109,13 @@ loadDataFromStorage();
 
 function loadDataFromStorage() {
   for (object in localStorage) {
-    var newContact = new Contact(JSON.parse(localStorage[object]));
-    // This next part fixes the dates from strings to date objects.
-    newContact.last = new Date(newContact.last);
-    newContact.next = new Date(newContact.next);
-    newContact.save();
+    if (object != 'key' && object != 'getItem' && object != 'setItem' && object != 'removeItem' && object != 'clear' && object != 'length') {
+      var newContact = new Contact(JSON.parse(localStorage[object]));
+      // This next part fixes the dates from strings to date objects.
+      newContact.last = new Date(newContact.last);
+      newContact.next = new Date(newContact.next);
+      newContact.save();
+    }
   }
 }
 
@@ -140,18 +144,13 @@ function addContact(submitObject) {
   }
 }
 
-// If there's nothing in storage, this will generate demo contacts.
-populateDemoContacts();
-
-function populateDemoContacts() {
-  if (localStorage.length == 0) {
-    for (var i = 0; i < demoContacts.length; i++) {
-      var newContact = new Contact(demoContacts[i]);
-      // This next part fixes the dates from strings to date objects.
-      newContact.last = new Date(newContact.last);
-      newContact.next = new Date(newContact.next);
-      newContact.save();
-    }
+function addDemoContacts() {
+  for (var i = 0; i < demoContacts.length; i++) {
+    var newContact = new Contact(demoContacts[i]);
+    // This next part fixes the dates from strings to date objects.
+    newContact.last = new Date(newContact.last);
+    newContact.next = new Date(newContact.next);
+    newContact.save();
   }
 }
 

@@ -28,7 +28,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+#topic{
+  text-overflow: clip;
+  word-wrap: normal;
+  white-space: normal;
+}
 p {
   text-transform: uppercase;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -40,18 +44,23 @@ p {
   text-align: center;
   font-size: 6.2rem;
 }
-#canvas{
-  height: 12rem;
-  width: 12rem;
-  /*margin: 20px;*/
+#ctx{
+  height: 10rem;
+  width: 10rem;
+  margin: 20px;
+  z-index: -100;
+  position: relative;
 }
 .circle {
   border: 2px white solid;
   border-radius: 100%;
   height: 10rem;
   width: 10rem;
-  margin: 20px;
-  background-color:  rgb(204, 51, 0);
+  background-color: rgb(204, 51, 0);
+  display: block;
+  z-index: 9999;
+  top: 50%;
+  transform: translate(70%, -200%);
 }
 
 .righthalf {
@@ -61,7 +70,7 @@ p {
   /*margin-left: 50%;*/
   height: 100%;
   display: flex;
-  padding: .25rem;
+  padding: 1rem;
   border-radius: 5px;
   flex-direction: column;
   background-color: rgba(255, 255, 255, .17);;
@@ -91,6 +100,7 @@ p {
 .editButton {
   width: 45%;
   flex-grow: 1;
+  margin-right: 4px;
   /*float: left;*/
   /*height: 100%;*/
 }
@@ -99,6 +109,7 @@ p {
   width: 45%;
   flex-grow: 1;
   float: right;
+  margin-left: 4px;
 }
 
 #completeBtn {
@@ -114,6 +125,9 @@ p {
 
 #postponeAmt {
   text-align: center;
+  height: 2rem;
+  width: 5rem;
+  padding: 0.3rem
 }
 
 .doneButton, .postponeButton {

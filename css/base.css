@@ -31,6 +31,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
 .ctctFaces {
   height: 4rem;
   width: 4rem;
+  object-fit: cover;
   border-radius: 100%;
   margin: 10px;
   display: inline-block;
@@ -40,6 +41,7 @@ font-family: Montserrat,"Helvetica Neue",sans-serif;
   line-height: 4rem;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: lighter;
+  object-fit: cover;
 }
 
 .mini-text {
@@ -77,11 +79,15 @@ div {
 
 #overdueCtcts {
   margin: 100px auto 0 auto;
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: flex-start;*/
 }
 
-#overdueCtcts div {
+#overdueCtcts > div {
+  width: 20%;
+}
+
+#overdueCtcts > .ctctLabels {
   display: inline-block;
   /*background-color: rgba(162,62,38,1);*/
   background-color: rgb(190, 220, 233);
@@ -97,6 +103,10 @@ div {
 
 #doubleRight {
   font-size: 60px !important;
+}
+
+#doubleRightDiv {
+  background-color: inherit !important;
 }
 
 .timeline {
@@ -157,4 +167,19 @@ footer {
   opacity: .3;
   font-family: "Helvetica Neue", sans-serif;
   font-weight: bolder;
+}
+
+#bigButton {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: none;
+  padding-top: 160px;
+  justify-content: center;
+  z-index: 1000;
+
+}
+
+#bigPlus {
+  font-size: 40rem !important;
 }

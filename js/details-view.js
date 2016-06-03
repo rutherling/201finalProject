@@ -2,10 +2,9 @@ document.getElementById('completeBtn').addEventListener('click', completeAction)
 document.getElementById('postponeBtn').addEventListener('click', postponeAction);
 document.getElementById('editBtn').addEventListener('click', redirectToEdit);
 document.getElementById('removeBtn').addEventListener('click', removeAction);
-
-function testing(event) {
-  console.log(event);
-}
+document.getElementById('postponeAmt').addEventListener('click', function() {
+  event.stopPropagation();
+});
 
 var passedId = urlObject(window.url).parameters.id;
 
@@ -16,11 +15,18 @@ function populateDetails() {
   for (key in currentContact) {
     var domElement = document.getElementById(key);
     if (currentContact[key] && domElement) {
-      if (typeof(currentContact[key]) == 'object') {
-        // Dates just show up as "objects"
-        domElement.innerText = currentContact[key].toDateString();
+      if (key == 'last' && Date.parse(currentContact[key]) == '0') { //Currently has odd behavior. Some new contacts have undefined last. Others have 1969.
+        domElement.innerText = 'N/A';
       } else {
-        domElement.innerText = currentContact[key];
+        if (typeof(currentContact[key]) == 'object') {
+        // Dates just show up as "objects"
+          domElement.innerText = currentContact[key].toDateString();
+        } else {
+          domElement.innerText = currentContact[key];
+        }
+        if (domElement.textContent == 'Invalid Date') {
+          domElement.innerText = 'N/A';
+        }
       }
     }
   }
@@ -35,22 +41,19 @@ function redirectToEdit() {
 // The contact object has a method for updating with the default number of days.
 function completeAction() {
   var arrayId = lookup(passedId);
-  contactArray[arrayId].completeCount++;
-  contactArray[arrayId].save();
   contactArray[arrayId].reset();
-  window.location.reload(true); // reloads the page, forcing a grab of new data.
+  window.location = 'index.html'; // reloads the page, forcing a grab of new data.
 }
 
 // postponing takes the number of days from the input field on the page and
 //  adds that today, setting that day as the next scheduled contact day.
 function postponeAction() {
   var days = document.getElementById('postponeAmt').value;
-  console.log(days);
   var arrayId = lookup(passedId);
   contactArray[arrayId].postpone(days);
   contactArray[arrayId].postponeCount++;
   contactArray[arrayId].save();
-  window.location.reload(true);
+  window.location = 'index.html';
 }
 
 function removeAction() {
@@ -65,10 +68,10 @@ function removeAction() {
 //data returned in an array for display in pie chart
 function getRatio(){
   var reachRatio = [];
-  var postponeCount = contactArray[passedId].postponeCount;
-  var completeCount = contactArray[passedId].completeCount;
+  var postponeCount = contactArray[lookup(passedId)].postponeCount;
+  var completeCount = contactArray[lookup(passedId)].completeCount;
   reachRatio.push(postponeCount);
-  reachRatio.push(completeCount); //Not a propoerty yet
+  reachRatio.push(completeCount);
   return reachRatio;
 }
 
@@ -81,7 +84,7 @@ var pieChart = new Chart(ctx,
       datasets: [
         {
           label: 'Name this',
-          data: [4,1],//reachRatio, TODO: test array and implement
+          data: getRatio(),//reachRatio, TODO: test array and implement
           backgroundColor: [
             '#CC3300',//red
             '#409769', //green
@@ -89,7 +92,9 @@ var pieChart = new Chart(ctx,
           hoverBackgroundColor: ['#9A9A9A','#9A9A9A']//end hover color
         }//end datasets object
       ]//end datasets
-    }//end data object
+    },//end data object
+    options: {
+      legend: {position: 'bottom'}
+    }
   }//end constructor thing?
-  );
-getRatio();
+);

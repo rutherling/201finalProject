@@ -12,7 +12,8 @@ demoContacts = [
     'next': '2016-05-20T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 14,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/JnM8E7S.jpg'
   },
   {
     'firstName': 'Kirstin',
@@ -23,7 +24,8 @@ demoContacts = [
     'next': '2016-05-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 17,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/ZTccqJk.jpg'
   },
   {
     'firstName': 'Cleo',
@@ -47,7 +49,8 @@ demoContacts = [
     'next': '2016-05-28T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 20,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/OntiPEd.jpg?1'
   },
   {
     'firstName': 'Debbra',
@@ -70,7 +73,8 @@ demoContacts = [
     'next': '2016-06-04T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 17,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/M7zKhBj.jpg'
   },
   {
     'firstName': 'Cedrick',
@@ -93,7 +97,8 @@ demoContacts = [
     'next': '2016-06-05T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 3,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/V3K9WfR.jpg'
   },
   {
     'firstName': 'Aron',
@@ -104,7 +109,8 @@ demoContacts = [
     'next': '2016-06-05T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 0,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/J17DixJ.jpg'
   },
   {
     'firstName': 'Leif',
@@ -126,7 +132,8 @@ demoContacts = [
     'next': '2016-06-11T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 0,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/vwlC6zi.jpg'
   },
   {
     'firstName': 'Jutta',
@@ -148,7 +155,8 @@ demoContacts = [
     'next': '2016-06-21T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 18,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/45Alwbh.jpg'
   },
   {
     'firstName': 'Otelia',
@@ -170,7 +178,8 @@ demoContacts = [
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 0,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/VgNqk1D.jpg'
   },
   {
     'firstName': 'Cedric',
@@ -192,7 +201,8 @@ demoContacts = [
     'next': '2016-07-03T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 0,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/xnvun5D.jpg'
   },
   {
     'firstName': 'Nikia',
@@ -214,7 +224,8 @@ demoContacts = [
     'next': '2016-07-15T19:00:00.000Z',
     'last': '2016-04-05T19:00:00.000Z',
     'postponeCount': 0,
-    'completeCount': 0
+    'completeCount': 0,
+    'photo': 'http://i.imgur.com/5QyOzbE.jpg'
   },
   {
     'firstName': 'Pinkie',
