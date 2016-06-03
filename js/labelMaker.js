@@ -28,12 +28,12 @@ function labelMaker (contactObject, status) {
     picture.setAttribute('class', 'hasPic ctctFaces hasImg');
     // picture.setAttribute('id','hasImg');
     picture.setAttribute('id', contactObject.id);
-    picture.setAttribute('src', 'url ("' + contactObject.photo + '");');
+    picture.setAttribute('src', contactObject.photo);
   } else {
     //Make alt div for contact avatar
-    var noPic = document.createElement('div');
-    noPic.setAttribute('class', 'altDiv ctctFaces');
-    noPic.setAttribute('id', contactObject.id);
+    var picture = document.createElement('div');
+    picture.setAttribute('class', 'altDiv ctctFaces');
+    picture.setAttribute('id', contactObject.id);
     var initString = function () {
       var string = '';
       if (contactObject.firstName) {
@@ -48,7 +48,7 @@ function labelMaker (contactObject, status) {
       return string;
     };
     var initials = document.createTextNode(initString());
-    noPic.appendChild(initials);
+    picture.appendChild(initials);
   }
 
   //Make postpone button if status is overdueList
@@ -111,10 +111,10 @@ function labelMaker (contactObject, status) {
   var bubble = document.createElement('div');
   bubble.setAttribute('class', 'ctctLabels slideinleft');
   bubble.setAttribute('id', contactObject.id);
-  bubble.appendChild(noPic);
-  if (contactObject.photo) {
-    bubble.appendChild(picture);
-  };
+  bubble.appendChild(picture);
+  // if (contactObject.photo) {
+  //   bubble.appendChild(picture);
+  // };
   bubble.appendChild(innerDiv);
   if (killDiv) {
     bubble.appendChild(killDiv);
