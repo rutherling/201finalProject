@@ -18,3 +18,16 @@ for (var i = 0; i < listAlphabetical().length; i++) {
 if (localStorage.length == 0) {
   document.getElementById('bigButton').setAttribute('style','display: flex');
 }
+
+document.onkeydown = function(e) {
+  // Hitting the Equal key on the index page will generate demo contacts.
+  if (e.code == 'Equal') {
+    addDemoContacts();
+    window.location.reload(true);
+  }
+  // Hitting the minus key clears storage
+  if (e.code == 'Minus') {
+    localStorage.clear();
+    window.location.reload(true);
+  }
+};
